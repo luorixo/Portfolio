@@ -1,7 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
-import { Facebook, Github, Twitter, YouTube } from '../components/AllSvgs';
+import { Email, Github, Linkedin } from '../components/AllSvgs';
 import {darkTheme} from '../components/Themes'
 
 const Icons = styled.div`
@@ -35,18 +35,13 @@ const SocialIcons = (props) => {
                 </NavLink>
             </div>
             <div>
-                <NavLink style={{color:'inherit'}} target="_blank" to={{pathname:"https://github.com/luorixo"}}>
-                    <Facebook width={25} height={25} fill={props.theme === "dark" ? darkTheme.text : darkTheme.body }/>
+                <NavLink style={{color:'inherit'}} target="_blank" to={{pathname:"linkedin.com/in/eugene-j-chua"}}>
+                    <Linkedin width={25} height={25} fill={props.theme === "dark" ? darkTheme.text : darkTheme.body }/>
                 </NavLink>
             </div>
             <div>
-                <NavLink style={{color:'inherit'}} target="_blank" to={{pathname:"https://github.com/luorixo"}}>
-                    <Twitter width={25} height={25} fill={props.theme === "dark" ? darkTheme.text : darkTheme.body }/>
-                </NavLink>
-            </div>
-            <div>
-                <NavLink style={{color:'inherit'}} target="_blank" to={{pathname:"https://github.com/luorixo"}}>
-                    <YouTube width={25} height={25} fill={props.theme === "dark" ? darkTheme.text : darkTheme.body }/>
+                <NavLink style={{color:'inherit'}} target="_blank" to={{pathname:"mailto:luorixo@gmail.com"}}>
+                    <Email width={25} height={25} fill={props.theme === "dark" ? darkTheme.text : darkTheme.body }/>
                 </NavLink>
             </div>
             <Line color={props.theme}/>

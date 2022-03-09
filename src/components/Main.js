@@ -6,7 +6,7 @@ import PowerButton from '../subComponents/PowerButton'
 import LogoComponent from '../subComponents/LogoComponent'
 import SocialIcons from '../subComponents/SocialIcons'
 import { NavLink } from 'react-router-dom'
-import { GreenBird, Planet, YinYang } from './AllSvgs'
+import { GreenBird } from './AllSvgs'
 import Intro from './Intro'
 
 const MainContainer = styled.div`
