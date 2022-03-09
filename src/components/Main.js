@@ -6,7 +6,8 @@ import PowerButton from '../subComponents/PowerButton'
 import LogoComponent from '../subComponents/LogoComponent'
 import SocialIcons from '../subComponents/SocialIcons'
 import { NavLink } from 'react-router-dom'
-import { YinYang } from './AllSvgs'
+import { GreenBird, Planet, YinYang } from './AllSvgs'
+import Intro from './Intro'
 
 const MainContainer = styled.div`
 background: ${props => props.theme.body};
@@ -78,11 +79,31 @@ text-decoration: none;
 z-index: 1;
 `
 const rotate = keyframes`
-from {
-    transform: rotate(0);
+0% {
+    /*transform: rotate(0);*/
+    transform: translate(0, 0);
 }
-to {
-    transform: rotate(360deg);
+
+20% {
+    transform: translate(0, 2px);
+}
+
+50% {
+    /*transform: rotate(0);*/
+    transform: translate(0, 23px);
+}
+
+60% {
+    transform: translate(0, 6px);
+}
+
+80% {
+    transform: translate(0, 2px);
+}
+
+100% {
+    /*transform: rotate(360deg);*/
+    transform: translate(0, 0);
 }
 `
 
@@ -103,7 +124,7 @@ align-items: center;
 transition: all 0.8s ease;
 
 &>:first-child {
-    animation: ${rotate} infinite 4s linear;
+    animation: ${rotate} infinite 1s linear;
 }
 
 &>:last-child {
@@ -113,7 +134,7 @@ transition: all 0.8s ease;
 `
 const DarkDiv = styled.div`
 position: absolute;
-background-color: #000;
+background-color: #631F0F;
 top: 0;
 bottom: 0;
 right: 50%;
@@ -137,8 +158,8 @@ const Main = () => {
                 <SocialIcons theme={click ? 'dark' : 'light'}/>
 
                 <Center click={click}>
-                    <YinYang  onClick={()=> handleClick()} width={click ? 120 : 200} height={click ? 120 : 200} fill='currentColor' />
-                    <span>click here</span>
+                    <GreenBird onClick={()=> handleClick()} width={click ? 120 : 200} height={click ? 120 : 200} fill='currentColor' />
+                    <span style={{color:'#631F0F'}}>click me ↑</span>
                 </Center>
 
                 <Contact target="_blank" to={{pathname:"mailto:luorixo@gmail.com"}}>
@@ -170,8 +191,8 @@ const Main = () => {
                 </Skills>
                 </BottomBar>
                 
-
             </Container>
+            {click ? <Intro click={click}/> : null }
         </MainContainer>
     )
 }
