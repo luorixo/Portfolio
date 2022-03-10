@@ -4,6 +4,7 @@ import styled, { keyframes } from 'styled-components'
 
 import PowerButton from '../subComponents/PowerButton'
 import LogoComponent from '../subComponents/LogoComponent'
+import ParticleComponent from '../subComponents/ParticleComponent'
 import SocialIcons from '../subComponents/SocialIcons'
 import { NavLink } from 'react-router-dom'
 import { GreenBird } from './AllSvgs'
@@ -154,6 +155,7 @@ const Main = () => {
         <DarkDiv click={click}/>
             <Container>
                 <PowerButton/>
+                <ParticleComponent theme='light'/>
                 <LogoComponent theme={click ? 'dark' : 'light'} to={{pathname:"/"}}/>
                 <SocialIcons className='trans' theme={click ? 'dark' : 'light'}/>
 
