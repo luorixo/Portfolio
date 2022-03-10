@@ -154,7 +154,7 @@ const Main = () => {
         <MainContainer>
         <DarkDiv click={click}/>
             <Container>
-                <PowerButton/>
+                {/*<PowerButton/>*/}
                 <ParticleComponent theme='light'/>
                 <LogoComponent theme={click ? 'dark' : 'light'} to={{pathname:"/"}}/>
                 <SocialIcons className='trans' theme={click ? 'dark' : 'light'}/>
@@ -169,10 +169,10 @@ const Main = () => {
                     whileHover={{scale: 1.1}}
                     whileTap={{scale: 0.9}}
                     >
-                        Say hi...
+                        email me!
                     </motion.h2>
                 </Contact>
-                <Blog to={{pathname:"/blog"}}>
+                {/*<Blog to={{pathname:"/blog"}}>
                     <motion.h2
                     whileHover={{scale: 1.1}}
                     whileTap={{scale: 0.9}}
@@ -187,7 +187,7 @@ const Main = () => {
                     >
                         Work
                     </motion.h2>
-                </Work>
+                </Work>*/}
 
                 <BottomBar>
                 <About to={{pathname:"/about"}} click={click}>
