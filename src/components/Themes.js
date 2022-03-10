@@ -2,6 +2,9 @@
 
 // Dark Green: #8AA92C
 // Light Green: #C2DC71
+// Light Yellow: #FFFAE0
+// Brown: #631F0F
+
 
 export const lightTheme = {
     body:"#fffae0",

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components'
 import img from "../assets/Images/natire.jpg"
 import LogoComponent from  "../subComponents/LogoComponent"
@@ -40,6 +40,14 @@ grid-gap: calc(1rem + 2vw);
 `
 
 const Blog = () => {
+
+    const [numbers, setNumbers] = useState(0);
+
+    useEffect(() => {
+        let num = (window.innerHeight - 70)/30;
+        setNumbers(parseInt(num));
+    })
+
     return (
         <MainContainer>
             <Container>
