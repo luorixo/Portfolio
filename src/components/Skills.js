@@ -10,9 +10,8 @@ import ParticleComponent from '../subComponents/ParticleComponent'
 const Box = styled.div`
 background-color: ${props => props.theme.body};
 width: 100vw;
-height: 100vh;
-height: -webkit-fill-available;
-position: relative;
+height: 100%;
+position: fixed;
 display: flex;
 justify-content: space-evenly;
 align-items: center;

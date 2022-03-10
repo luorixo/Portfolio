@@ -14,9 +14,14 @@ h1, h2, h3, h4, h5, h6 {
 
 body {
     padding: 0;
+    height: 100%;
     margin: 0;
     overflow-x: hidden;
     font-family: 'Source Sans Pro', sans-serif;
+}
+
+html {
+    height: 100%;
 }
 `
 
