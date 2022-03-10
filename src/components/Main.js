@@ -14,6 +14,7 @@ const MainContainer = styled.div`
 background: ${props => props.theme.body};
 width: 100vw;
 height: 100vh;
+height: -webkit-fill-available;
 overflow: hidden;
 position: relative;
 
@@ -117,6 +118,7 @@ border: none;
 outline: none;
 background-color: transparent;
 cursor: pointer;
+-webkit-tap-highlight-color: transparent;
 
 display: flex;
 flex-direction: column;

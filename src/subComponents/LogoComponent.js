@@ -10,6 +10,7 @@ font-family: 'Pacifico', cursive;
 font-size: 2em;
 text-decoration: none;
 transition: ease-out 0.4s;
+-webkit-tap-highlight-color: transparent;
 
 position: fixed;
 left: 2rem;
