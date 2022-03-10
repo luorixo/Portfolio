@@ -21,7 +21,7 @@ z-index: 3;
 const LogoComponent = (props) => {
     return (
         <Logo color={props.theme} to={{pathname:"/"}}>
-            Echua
+            echua.com
         </Logo>
     )
 }
