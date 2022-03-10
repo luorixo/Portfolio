@@ -124,7 +124,7 @@ align-items: center;
 transition: all 0.8s ease;
 
 &>:first-child {
-    animation: ${rotate} infinite 1s linear;
+    animation: ${rotate} infinite 1.3s linear;
 }
 
 &>:last-child {
@@ -154,8 +154,8 @@ const Main = () => {
         <DarkDiv click={click}/>
             <Container>
                 <PowerButton/>
-                <LogoComponent theme={click ? 'dark' : 'light'}/>
-                <SocialIcons theme={click ? 'dark' : 'light'}/>
+                <LogoComponent theme={click ? 'dark' : 'light'} to={{pathname:"/"}}/>
+                <SocialIcons className='trans' theme={click ? 'dark' : 'light'}/>
 
                 <Center click={click}>
                     <GreenBird onClick={()=> handleClick()} width={click ? 120 : 200} height={click ? 120 : 200} fill='currentColor' />
@@ -163,31 +163,46 @@ const Main = () => {
                 </Center>
 
                 <Contact target="_blank" to={{pathname:"mailto:luorixo@gmail.com"}}>
-                    <h2>
+                    <motion.h2
+                    whileHover={{scale: 1.1}}
+                    whileTap={{scale: 0.9}}
+                    >
                         Say hi...
-                    </h2>
+                    </motion.h2>
                 </Contact>
                 <Blog to={{pathname:"/blog"}}>
-                    <h2>
+                    <motion.h2
+                    whileHover={{scale: 1.1}}
+                    whileTap={{scale: 0.9}}
+                    >
                         Blog
-                    </h2>
+                    </motion.h2>
                 </Blog>
                 <Work to={{pathname:"/work"}} click={click}>
-                    <h2>
+                    <motion.h2
+                    whileHover={{scale: 1.1}}
+                    whileTap={{scale: 0.9}}
+                    >
                         Work
-                    </h2>
+                    </motion.h2>
                 </Work>
 
                 <BottomBar>
                 <About to={{pathname:"/about"}} click={click}>
-                    <h2>
+                    <motion.h2
+                    whileHover={{scale: 1.1}}
+                    whileTap={{scale: 0.9}}
+                    >
                         About.
-                    </h2>
+                    </motion.h2>
                 </About>
                 <Skills to={{pathname:"/skills"}}>
-                    <h2>
+                    <motion.h2
+                    whileHover={{scale: 1.1}}
+                    whileTap={{scale: 0.9}}
+                    >
                         Skills.
-                    </h2>
+                    </motion.h2>
                 </Skills>
                 </BottomBar>
                 

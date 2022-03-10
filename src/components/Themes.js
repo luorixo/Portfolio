@@ -1,5 +1,8 @@
 // dark and light themes
 
+// Dark Green: #8AA92C
+// Light Green: #C2DC71
+
 export const lightTheme = {
     body:"#fffae0",
     text:"#631F0F",

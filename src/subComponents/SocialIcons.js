@@ -22,6 +22,7 @@ z-index: 3;
 
 const Line = styled.span`
 width: 2px;
+transition: ease-out 0.4s;
 height: 8rem;
 background-color: ${props => props.color === 'dark' ? darkTheme.text : darkTheme.body };
 `
@@ -35,7 +36,7 @@ const SocialIcons = (props) => {
                 </NavLink>
             </div>
             <div>
-                <NavLink style={{color:'inherit'}} target="_blank" to={{pathname:"linkedin.com/in/eugene-j-chua"}}>
+                <NavLink style={{color:'inherit'}} target="_blank" to={{pathname:"https://www.linkedin.com/in/eugene-j-chua/"}}>
                     <Linkedin width={25} height={25} fill={props.theme === "dark" ? darkTheme.text : darkTheme.body }/>
                 </NavLink>
             </div>
