@@ -65,7 +65,7 @@ const Skills = () => {
                 <LogoComponent theme='light'/>
                 <SocialIcons theme='light'/>
                 <PowerButton theme='light'/>
-                <ParticleComponent theme='light'/>
+                <ParticleComponent theme='dark'/>
                 <Main>
                     <Title>
                         <Design width={40} height={40}/> Designer

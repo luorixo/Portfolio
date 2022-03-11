@@ -136,7 +136,7 @@ transition: all 0.8s ease;
 `
 const DarkDiv = styled.div`
 position: absolute;
-background-color: #631F0F;
+background-color: #C2DC71;
 top: 0;
 bottom: 0;
 right: 50%;
@@ -162,7 +162,7 @@ const Main = () => {
 
                 <Center click={click}>
                     <GreenBird onClick={()=> handleClick()} width={click ? 120 : 200} height={click ? 120 : 200} fill='currentColor' />
-                    <span style={{color:'#631F0F'}}>click me ↑</span>
+                    <span style={{color:'#C2DC71'}}>click me ↑</span>
                 </Center>
 
                 <Contact target="_blank" to={{pathname:"mailto:luorixo@gmail.com"}}>

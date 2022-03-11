@@ -1,8 +1,9 @@
 // dark and light themes
 
-// Dark Green: #8AA92C
+// Dark Green: #8aa92c
 // Light Green: #C2DC71
 // Light Yellow: #FFFAE0
+// Bright Yellow: #ffd608
 // Brown: #631F0F
 
 
