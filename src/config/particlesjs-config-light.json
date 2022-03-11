@@ -1,10 +1,10 @@
 {
   "particles": {
     "number": {
-      "value": 12,
+      "value": 14,
       "density": {
-        "enable": false,
-        "value_area": 800
+        "enable": true,
+        "value_area": 650
       }
     },
     "color": {
@@ -20,23 +20,23 @@
         "nb_sides": 5
       },
       "image": {
-        "src": "https://github.com/luorixo/portfolio/blob/main/src/assets/Images/Vector.png?raw=true",
+        "src": "https://github.com/luorixo/portfolio/blob/main/src/assets/Images/Vector(2).png?raw=true",
         "width": 100,
         "height": 100
       }
     },
     "opacity": {
-      "value": 0.5,
+      "value": 0.35,
       "random": true,
       "anim": {
         "enable": false,
         "speed": 1,
-        "opacity_min": 0.3,
+        "opacity_min": 0.1,
         "sync": false
       }
     },
     "size": {
-      "value": 150,
+      "value": 160,
       "random": true,
       "anim": {
         "enable": false,
@@ -54,7 +54,7 @@
     },
     "move": {
       "enable": true,
-      "speed": 6,
+      "speed": 5.5,
       "direction": "left",
       "random": false,
       "straight": true,
