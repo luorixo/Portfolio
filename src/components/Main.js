@@ -10,6 +10,7 @@ import { NavLink } from 'react-router-dom'
 import { GreenBird } from './AllSvgs'
 import Intro from './Intro'
 
+
 const MainContainer = styled.div`
 background: ${props => props.theme.body};
 width: 100vw;
