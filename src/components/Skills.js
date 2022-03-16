@@ -6,6 +6,7 @@ import LogoComponent from '../subComponents/LogoComponent'
 import SocialIcons from '../subComponents/SocialIcons'
 import PowerButton from '../subComponents/PowerButton'
 import ParticleComponent from '../subComponents/ParticleComponent'
+import { motion } from 'framer-motion';
 
 const Box = styled.div`
 background-color: ${props => props.theme.body};
@@ -17,7 +18,7 @@ justify-content: space-evenly;
 align-items: center;
 `
 
-const Main = styled.div`
+const Main = styled(motion.ul)`
 border: 2px solid ${props => props.theme.text};
 color: ${props => props.theme.text};
 background-color: ${props => props.theme.body};
@@ -58,6 +59,18 @@ ul, p {
 }
 `
 
+// framer-motion config
+const container = {
+    hidden: {opacity:0},
+    show: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.5,
+            duration: 0.5,
+        }
+    }
+}
+
 const Skills = () => {
     return (
         <ThemeProvider theme={lightTheme}>
@@ -66,7 +79,7 @@ const Skills = () => {
                 <SocialIcons theme='light'/>
                 <PowerButton theme='light'/>
                 <ParticleComponent theme='dark'/>
-                <Main>
+                <Main variants={container} initial='hidden' animate='show'>
                     <Title>
                         <Design width={40} height={40}/> Designer
                     </Title>
@@ -85,7 +98,7 @@ const Skills = () => {
                         </ul>
                     </Description>
                 </Main>
-                <Main>
+                <Main variants={container} initial='hidden' animate='show'>
                     <Title>
                         <Develope width={40} height={40}/> Developer
                     </Title>
