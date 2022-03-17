@@ -45,19 +45,39 @@ display: flex;
 `
 
 const Text = styled.div`
-font-size: calc(1em + 1.5vw);
+font-size: calc(0.8em + 1.5vw);
 color: ${props => props.theme.body};
 padding: 2rem;
-cursor: pointer;
+cursor: auto;
 
 display: flex;
 flex-direction: column;
 justify-content: space-evenly;
 
-&>*:last-child{
-    color: ${props => `rgba(${props.theme.textRgba},0.7)` };
-    font-size: calc(0.5rem + 1.5vw);
+&>*:nth-last-child(3){
+    color: ${props => `rgba(${props.theme.textRgba},0.75)` };
+    font-size: calc(0.35rem + 1.5vw);
     font-weight: 300;
+    margin-top: 1.5rem
+}
+
+&>*:nth-last-child(2){
+    color: ${props => `rgba(${props.theme.textRgba},0.75)` };
+    font-size: calc(0.35rem + 1.5vw);
+    font-weight: 300;
+    margin-top: 0.4rem;
+}
+
+icons{
+    margin-top: 1.5rem;
+}
+
+i:not(:last-child){
+    margin-right: 0.9rem;
+}
+
+i:hover{
+    opacity: 0.8;
 }
 `
 
@@ -70,9 +90,18 @@ const Intro = () => {
         >
             <SubBox>
                 <Text>
-                    <h1>Hi,</h1>
-                    <h3>I'm Eugene.</h3>
-                    <h6>I'm a software engineering student @ the University of Auckland.</h6>
+                    <h1>Hey!</h1>
+                    <h2>I'm Eugene.</h2>
+                    <h6>I do software engineering @ the University of Auckland.</h6>
+                    <h6>I've worked with:</h6>
+                    <icons>
+                        <i class="fa-brands fa-python fa-lg">
+                        </i>
+                        <i class="fa-brands fa-js fa-lg" title="JavaScript"></i>
+                        <i class="fa-brands fa-react fa-lg"></i>
+                        <i class="fa-brands fa-github fa-lg"></i>
+                        <i class="fa-brands fa-git-alt fa-lg"></i>
+                    </icons>
                 </Text>
             </SubBox>
             <SubBox>
