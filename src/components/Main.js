@@ -179,9 +179,11 @@ const Main = () => {
                 {/*<PowerButton onClick={()=> handleClick()}/>*/}
                 <LogoComponent theme={click ? 'dark' : 'light'} to={{pathname:"/"}}/>
                 <Box>
+                <Particles style={{position:'absolute',top:0}} params={configStars}/>
+                <Particles style={{position:'absolute',top:0}} params={configLayerTwo}/>
                     <Particles style={{position:'absolute',top:0}} params={configLayerOne}/>
-                    <Particles style={{position:'absolute',top:0}} params={configLayerTwo}/>
-                    <Particles style={{position:'absolute',top:0}} params={configStars}/>
+                    
+                    
                 </Box>
                 
                 <SocialIcons className='trans' theme={click ? 'dark' : 'light'}/>
