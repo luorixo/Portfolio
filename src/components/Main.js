@@ -7,7 +7,7 @@ import Particles from 'react-particles-js';
 import configLayerOne from "../config/particlesjs-config-layer-one.json"
 import configLayerTwo from "../config/particlesjs-config-layer-two.json"
 import configStars from "../config/particlesjs-config-stars.json"
-
+import configDragon from "../config/particlesjs-config-dragon.json"
 
 import PowerButton from '../subComponents/PowerButton'
 import LogoComponent from '../subComponents/LogoComponent'
@@ -179,8 +179,9 @@ const Main = () => {
                 {/*<PowerButton onClick={()=> handleClick()}/>*/}
                 <LogoComponent theme={click ? 'dark' : 'light'} to={{pathname:"/"}}/>
                 <Box>
-                <Particles style={{position:'absolute',top:0}} params={configStars}/>
-                <Particles style={{position:'absolute',top:0}} params={configLayerTwo}/>
+                    <Particles style={{position:'absolute',top:0}} params={configStars}/>
+                    <Particles style={{position:'absolute',top:0}} params={configLayerTwo}/>
+                    {/*<Particles style={{position:'absolute',top:0}} params={configDragon}/>*/}
                     <Particles style={{position:'absolute',top:0}} params={configLayerOne}/>
                     
                     
