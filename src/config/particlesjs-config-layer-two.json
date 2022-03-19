@@ -1,9 +1,9 @@
 {
   "particles": {
     "number": {
-      "value": 6,
+      "value": 8,
       "density": {
-        "enable": false,
+        "enable": true,
         "value_area": 650
       }
     },
@@ -20,9 +20,9 @@
         "nb_sides": 5
       },
       "image": {
-        "src": "https://github.com/luorixo/portfolio/blob/main/src/assets/Images/Vector(3).png?raw=true",
-        "width": 30,
-        "height": 20
+        "src": "https://github.com/luorixo/portfolio/blob/main/src/assets/Images/chicloud.png?raw=true",
+        "width": 2.25,
+        "height": 1
       }
     },
     "opacity": {

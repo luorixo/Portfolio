@@ -137,7 +137,6 @@ transform: translate(-50%, -50%);
 border: none;
 outline: none;
 background-color: transparent;
-cursor: pointer;
 -webkit-tap-highlight-color: transparent;
 
 display: flex;
@@ -186,8 +185,8 @@ const Main = () => {
                 <SocialIcons className='trans' theme={click ? 'dark' : 'light'}/>
 
                 <Center click={click}>
-                    <GreenBird onClick={()=> handleClick()} width={click ? 120 : 200} height={click ? 120 : 200} fill='currentColor' />
-                    <span style={{color:'#C2DC71'}}>click me ↑</span>
+                    <GreenBird style={{cursor:'pointer'}} onClick={()=> handleClick()} width={click ? 120 : 200} height={click ? 120 : 200} fill='currentColor' />
+                    <span style={{color:'#ffd608'}}>click me ↑</span>
                 </Center>
 
                 <Contact target="_blank" to={{pathname:"mailto:luorixo@gmail.com"}}>
