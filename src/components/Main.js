@@ -6,6 +6,7 @@ import styled, { keyframes } from 'styled-components'
 import Particles from 'react-particles-js';
 import configLayerOne from "../config/particlesjs-config-layer-one.json"
 import configLayerTwo from "../config/particlesjs-config-layer-two.json"
+import configStars from "../config/particlesjs-config-stars.json"
 
 
 import PowerButton from '../subComponents/PowerButton'
@@ -180,6 +181,7 @@ const Main = () => {
                 <Box>
                     <Particles style={{position:'absolute',top:0}} params={configLayerOne}/>
                     <Particles style={{position:'absolute',top:0}} params={configLayerTwo}/>
+                    <Particles style={{position:'absolute',top:0}} params={configStars}/>
                 </Box>
                 
                 <SocialIcons className='trans' theme={click ? 'dark' : 'light'}/>
