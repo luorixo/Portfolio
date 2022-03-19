@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { darkTheme } from "../components/Themes";
+import { motion } from "framer-motion";
 
 const Logo = styled(NavLink)`
 display: inline-block;
@@ -18,10 +19,14 @@ top: 2rem;
 z-index: 3;
 `
 
+
+
 const LogoComponent = (props) => {
     return (
         <Logo color={props.theme} to={{pathname:"/"}}>
+            
             echua.top
+            
         </Logo>
     )
 }

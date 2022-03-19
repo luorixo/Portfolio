@@ -1,6 +1,6 @@
 // Home Button
 
-import React from "react";
+import React, { useState } from 'react'
 import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
@@ -38,11 +38,12 @@ cursor: pointer;
 `
 
 const PowerButton = () => {
+
+    const [click, setClick] = useState(false);
+    const handleClick = () => setClick(!click);
     return (
-        <Power>
-            <NavLink to="/">
+        <Power click={click}>
             <PowerBtn width={30} height={30} fill='currentColor'/>
-            </NavLink>
         </Power>
     )
 }

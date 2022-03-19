@@ -2,21 +2,41 @@ import { motion } from 'framer-motion'
 import React, { useState } from 'react'
 import styled, { keyframes } from 'styled-components'
 
+// background particles
+import Particles from 'react-particles-js';
+import configLayerOne from "../config/particlesjs-config-layer-one.json"
+import configLayerTwo from "../config/particlesjs-config-layer-two.json"
+
+
 import PowerButton from '../subComponents/PowerButton'
 import LogoComponent from '../subComponents/LogoComponent'
-import ParticleComponent from '../subComponents/ParticleComponent'
 import SocialIcons from '../subComponents/SocialIcons'
 import { NavLink } from 'react-router-dom'
 import { GreenBird } from './AllSvgs'
+//import img from "../assets/Images/hills.png"
 import Intro from './Intro'
 
+const Box = styled.div`
+position: absolute;
+top: 0;
+right: 0;
+left: 0;
+bottom: 0;
+z-index: -1;
+`
 
 const MainContainer = styled.div`
 background: ${props => props.theme.body};
+/*background-image: url();
+background-size: cover;
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center;*/
 width: 100vw;
 height: 100%;
 overflow: hidden;
 position: fixed;
+z-index: 10;
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Karla', sans-serif;
@@ -144,7 +164,7 @@ right: 50%;
 width: ${props => props.click ? '50%' : '0%'};
 height: ${props => props.click ? '100%' : '0%'};
 z-index: 1;
-transition: height 0.5s ease, width 1s ease 0.5s
+transition: height 0.5s ease, width 1s ease 0.5s;
 `
 
 const Main = () => {
@@ -156,9 +176,13 @@ const Main = () => {
         <MainContainer>
         <DarkDiv click={click}/>
             <Container>
-                {/*<PowerButton/>*/}
-                <ParticleComponent theme='light'/>
+                {/*<PowerButton onClick={()=> handleClick()}/>*/}
                 <LogoComponent theme={click ? 'dark' : 'light'} to={{pathname:"/"}}/>
+                <Box>
+                    <Particles style={{position:'absolute',top:0}} params={configLayerOne}/>
+                    <Particles style={{position:'absolute',top:0}} params={configLayerTwo}/>
+                </Box>
+                
                 <SocialIcons className='trans' theme={click ? 'dark' : 'light'}/>
 
                 <Center click={click}>
@@ -170,11 +194,11 @@ const Main = () => {
                     <motion.h2
                     initial={{
                         y:-200,
-                        transition: { type:'spring', duration: 1.5, delay:1}
+                        transition: { type:'spring', duration: 1.5, delay:0}
                     }}
                     animate={{
                         y:0,
-                        transition: { type:'spring', duration: 1.5, delay:1}
+                        transition: { type:'spring', duration: 1.5, delay:0}
                     }}
                     whileHover={{scale: 1.1}}
                     whileTap={{scale: 0.9}}
@@ -204,11 +228,11 @@ const Main = () => {
                     <motion.h2
                     initial={{
                         y:200,
-                        transition: { type:'spring', duration: 1.5, delay:1}
+                        transition: { type:'spring', duration: 1.5, delay:0}
                     }}
                     animate={{
                         y:0,
-                        transition: { type:'spring', duration: 1.5, delay:1}
+                        transition: { type:'spring', duration: 1.5, delay:0}
                     }}
                     whileHover={{scale: 1.1}}
                     whileTap={{scale: 0.9}}
@@ -220,11 +244,11 @@ const Main = () => {
                     <motion.h2
                     initial={{
                         y:200,
-                        transition: { type:'spring', duration: 1.5, delay:1}
+                        transition: { type:'spring', duration: 1.5, delay:0}
                     }}
                     animate={{
                         y:0,
-                        transition: { type:'spring', duration: 1.5, delay:1}
+                        transition: { type:'spring', duration: 1.5, delay:0}
                     }}
                     whileHover={{scale: 1.1}}
                     whileTap={{scale: 0.9}}

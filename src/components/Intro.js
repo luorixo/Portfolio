@@ -69,7 +69,7 @@ justify-content: space-evenly;
 }
 
 icons{
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }
 
 i:not(:last-child){
@@ -79,7 +79,7 @@ i:not(:last-child){
 i:hover{
     opacity: 0.8;
 }
-`
+` 
 
 const Intro = () => {
     return (
@@ -92,11 +92,10 @@ const Intro = () => {
                 <Text>
                     <h1>Hey!</h1>
                     <h2>I'm Eugene.</h2>
-                    <h6>I do software engineering @ the University of Auckland.</h6>
+                    <h6>I'm doing software engineering @ the University of Auckland.</h6>
                     <h6>I've worked with:</h6>
                     <icons>
-                        <i class="fa-brands fa-python fa-lg">
-                        </i>
+                        <i class="fa-brands fa-python fa-lg"></i>
                         <i class="fa-brands fa-js fa-lg" title="JavaScript"></i>
                         <i class="fa-brands fa-react fa-lg"></i>
                         <i class="fa-brands fa-github fa-lg"></i>
