@@ -191,7 +191,7 @@ const Main = () => {
 
                 <Center click={click}>
                     <GreenBird style={{cursor:'pointer'}} onClick={()=> handleClick()} width={click ? 120 : 200} height={click ? 120 : 200} fill='currentColor' />
-                    <span style={{color:'#ffd608'}}>click me ↑</span>
+                    <span style={{color:'#fff'}}>click me ↑</span>
                 </Center>
 
                 <Contact target="_blank" to={{pathname:"mailto:luorixo@gmail.com"}}>
