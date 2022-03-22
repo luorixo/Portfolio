@@ -8,14 +8,14 @@ const Logo = styled(NavLink)`
 display: inline-block;
 color: ${props => props.color === 'dark' ? darkTheme.text : darkTheme.body};
 font-family: 'Pacifico', cursive;
-font-size: 2em;
+font-size: 1.5em;
 text-decoration: none;
 transition: ease-out 0.4s;
 -webkit-tap-highlight-color: transparent;
 
 position: fixed;
 left: 2rem;
-top: 1.5rem;
+top: 1rem;
 z-index: 3;
 `
 

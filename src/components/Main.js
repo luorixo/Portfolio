@@ -28,6 +28,7 @@ z-index: -1;
 
 const MainContainer = styled.div`
 background: ${props => props.theme.body};
+background: #102F42;
 /*background-image: url();
 background-size: cover;
 background-repeat: no-repeat;
@@ -39,6 +40,7 @@ overflow: hidden;
 position: fixed;
 z-index: 10;
 
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Karla', sans-serif;
     font-weight: 500;
@@ -46,7 +48,8 @@ h1, h2, h3, h4, h5, h6 {
 `
 
 const Container = styled.div`
-padding: 2rem;
+padding: 20rem;
+left: 20%;
 `
 const Contact = styled(NavLink)`
 color: ${props => props.theme.text};
@@ -81,6 +84,8 @@ transition: ease-out 0.4s;
 const BottomBar = styled.div`
 position: absolute;
 bottom: 2rem;
+/*background: #fff;
+padding: 1rem;*/
 left: 0;
 right: 0;
 width: 100%;
@@ -145,6 +150,7 @@ flex-direction: column;
 justify-content: center;
 align-items: center;
 transition: all 0.8s ease;
+z-index: 10;
 
 &>:first-child {
     animation: ${rotate} infinite 1.3s linear;
@@ -160,11 +166,11 @@ position: absolute;
 background-color: #C2DC71;
 top: 0;
 bottom: 0;
-right: 50%;
-width: ${props => props.click ? '50%' : '0%'};
+right: 0%;
+width: ${props => props.click ? '100%' : '0%'};
 height: ${props => props.click ? '100%' : '0%'};
-z-index: 1;
-transition: height 0.5s ease, width 1s ease 0.5s;
+transition: height 0.7s ease, width 0.8s ease 2s;
+z-index: 0;
 `
 
 const Main = () => {
@@ -179,15 +185,15 @@ const Main = () => {
                 {/*<PowerButton onClick={()=> handleClick()}/>*/}
                 <LogoComponent theme={click ? 'dark' : 'light'} to={{pathname:"/"}}/>
                 <Box>
-                    <Particles style={{position:'absolute',top:0}} params={configStars}/>
+                    {/*<Particles style={{position:'absolute',top:0}} params={configStars}/>
                     <Particles style={{position:'absolute',top:0}} params={configLayerTwo}/>
-                    {/*<Particles style={{position:'absolute',top:0}} params={configDragon}/>*/}
-                    <Particles style={{position:'absolute',top:0}} params={configLayerOne}/>
+                    {/*<Particles style={{position:'absolute',top:0}} params={configDragon}/>
+                 <Particles style={{position:'absolute',top:0}} params={configLayerOne}/>*/}
                     
                     
                 </Box>
                 
-                <SocialIcons className='trans' theme={click ? 'dark' : 'light'}/>
+                <SocialIcons style={{transition:'ease-out 0.4s'}} theme={click ? 'dark' : 'light'}/>
 
                 <Center click={click}>
                     <GreenBird style={{cursor:'pointer'}} onClick={()=> handleClick()} width={click ? 120 : 200} height={click ? 120 : 200} fill='currentColor' />
@@ -210,24 +216,8 @@ const Main = () => {
                         email me!
                     </motion.h2>
                 </Contact>
-                {/*<Blog to={{pathname:"/blog"}}>
-                    <motion.h2
-                    whileHover={{scale: 1.1}}
-                    whileTap={{scale: 0.9}}
-                    >
-                        Blog
-                    </motion.h2>
-                </Blog>
-                <Work to={{pathname:"/work"}} click={click}>
-                    <motion.h2
-                    whileHover={{scale: 1.1}}
-                    whileTap={{scale: 0.9}}
-                    >
-                        Work
-                    </motion.h2>
-                </Work>*/}
-
-                <BottomBar>
+                
+                {click ? <BottomBar  click={click}>
                 <About to={{pathname:"/about"}} click={click}>
                     <motion.h2
                     initial={{
@@ -260,7 +250,7 @@ const Main = () => {
                         Skills.
                     </motion.h2>
                 </Skills>
-                </BottomBar>
+                </BottomBar> : null }
                 
             </Container>
             {click ? <Intro click={click}/> : null }

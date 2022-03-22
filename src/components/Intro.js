@@ -20,7 +20,7 @@ background: linear-gradient(
     linear-gradient(
     to right,
     ${props => props.theme.body} 50%,
-    ${props => props.theme.text} 50%) top;
+    ${props => props.theme.text} 100%) top;
 
     background-repeat: no-repeat;
     background-size: 100% 2px;
@@ -30,9 +30,10 @@ background: linear-gradient(
 `
 
 const SubBox = styled.div`
-width: 50%;
+width: 100%;
 position: relative;
 display: flex;
+text-align: justify;
 
 .pic {
     position: absolute;
@@ -103,14 +104,15 @@ const Intro = () => {
                     </icons>
                 </Text>
             </SubBox>
-            <SubBox>
+            {/*<SubBox>
                 <motion.div
                 initial={{opacity:0}}
                 animate={{opacity:1}}
                 transition={{duration:1, delay:2 }}>
-                    {/*<img className="pic" src={Me} alt="Profile Pic"/>*/}
+                    <img className="pic" src={Me} alt="Profile Pic"/>
                 </motion.div>
             </SubBox>
+            */}
         </Box>
     )
 }
