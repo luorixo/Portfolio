@@ -54,8 +54,8 @@
     },
     "move": {
       "enable": true,
-      "speed": 0,
-      "direction": "none",
+      "speed": 1,
+      "direction": "left",
       "random": true,
       "straight": false,
       "out_mode": "out",
@@ -75,7 +75,7 @@
         "mode": "bubble"
       },
       "onclick": {
-        "enable": false,
+        "enable": true,
         "mode": "repulse"
       },
       "resize": true

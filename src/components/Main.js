@@ -23,7 +23,7 @@ top: 0;
 right: 0;
 left: 0;
 bottom: 0;
-z-index: -1;
+z-index: 0;
 `
 
 const MainContainer = styled.div`
@@ -171,7 +171,7 @@ right: 0%;
 width: ${props => props.click ? '100%' : '0%'};
 height: ${props => props.click ? '100%' : '0%'};
 transition: height 0.5s ease, width 1s ease 0.5s;
-z-index: 0;
+z-index: 1;
 `
 
 const Main = () => {
@@ -209,7 +209,7 @@ const Main = () => {
                     }}
                     animate={{
                         y:0,
-                        transition: { type:'spring', duration: 1.5, delay:0}
+                        transition: { type:'spring', duration: 2, delay:1.5}
                     }}
                     whileHover={{scale: 1.1}}
                     whileTap={{scale: 0.9}}
