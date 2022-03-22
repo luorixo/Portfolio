@@ -85,9 +85,9 @@ i:hover{
 const Intro = () => {
     return (
         <Box
-        initial={{height:0}}
+        initial={{height:'0vh'}}
         animate={{height:'55vh'}}
-        transition={{type:'spring', duration:1.8, delay:0.7 }}
+        transition={{type:'spring', bounce:0.4, duration:1.8, delay:0}}
         >
             <SubBox>
                 <Text>

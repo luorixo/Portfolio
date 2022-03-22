@@ -150,7 +150,7 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-transition: all 2s ease;
+transition: all 1s ease;
 z-index: 10;
 
 &>:first-child {
@@ -169,8 +169,8 @@ top: 0;
 bottom: 0;
 right: 0%;
 width: ${props => props.click ? '100%' : '0%'};
-height: ${props => props.click ? '100%' : '50%'};
-transition: height 0.5s ease, width 1.2s ease 0.5s;
+height: ${props => props.click ? '100%' : '1%'};
+transition: height 0.5s ease, width 1.5s ease 0.8s;
 z-index: 1;
 `
 
@@ -209,7 +209,7 @@ const Main = () => {
                     }}
                     animate={{
                         y:0,
-                        transition: { type:'spring', duration: 2, delay:1.5}
+                        transition: { type:'spring', bounce:0.4, duration: 2.2, delay:1.7}
                     }}
                     whileHover={{scale: 1.1}}
                     whileTap={{scale: 0.9}}
@@ -227,7 +227,7 @@ const Main = () => {
                     }}
                     animate={{
                         y:0,
-                        transition: { type:'spring', duration: 2, delay:1.5}
+                        transition: { type:'spring', bounce:0.4, duration: 2.2, delay:1.7}
                     }}
                     whileHover={{scale: 1.1}}
                     whileTap={{scale: 0.9}}
@@ -243,7 +243,7 @@ const Main = () => {
                     }}
                     animate={{
                         y:0,
-                        transition: { type:'spring', duration: 2, delay:1.5}
+                        transition: { type:'spring', bounce:0.4, duration: 2.2, delay:1.7}
                     }}
                     whileHover={{scale: 1.1}}
                     whileTap={{scale: 0.9}}

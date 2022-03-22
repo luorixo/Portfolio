@@ -34,7 +34,7 @@ const LogoComponent = (props) => {
             }}
             animate={{
                 y:0,
-                transition: { type:'spring', duration: 2, delay:1.5}
+                transition: { type:'spring', bounce:0.4, duration: 2.2, delay:1.7}
             }}
             >
             echua.top
