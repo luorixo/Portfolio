@@ -53,6 +53,7 @@ left: 20%;
 `
 const Contact = styled(NavLink)`
 color: ${props => props.theme.text};
+color: ${props => props.theme.body};
 position: absolute;
 top: 2rem;
 right: calc(1rem + 2vw);
@@ -102,7 +103,7 @@ transition: ease-out 0.4s;
 `
 
 const Skills = styled(NavLink)`
-color: ${props => props.theme.text};
+color: ${props => props.theme.body};
 text-decoration: none;
 z-index: 1;
 `
@@ -226,7 +227,7 @@ const Main = () => {
                     }}
                     animate={{
                         y:0,
-                        transition: { type:'spring', duration: 1.5, delay:0}
+                        transition: { type:'spring', duration: 2, delay:1.5}
                     }}
                     whileHover={{scale: 1.1}}
                     whileTap={{scale: 0.9}}
@@ -242,7 +243,7 @@ const Main = () => {
                     }}
                     animate={{
                         y:0,
-                        transition: { type:'spring', duration: 1.5, delay:0}
+                        transition: { type:'spring', duration: 2, delay:1.5}
                     }}
                     whileHover={{scale: 1.1}}
                     whileTap={{scale: 0.9}}
