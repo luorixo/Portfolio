@@ -169,7 +169,7 @@ bottom: 0;
 right: 0%;
 width: ${props => props.click ? '100%' : '0%'};
 height: ${props => props.click ? '100%' : '0%'};
-transition: height 0.7s ease, width 0.8s ease 2s;
+transition: height 0.5s ease, width 1s ease 0.5s;
 z-index: 0;
 `
 
@@ -183,7 +183,7 @@ const Main = () => {
         <DarkDiv click={click}/>
             <Container>
                 {/*<PowerButton onClick={()=> handleClick()}/>*/}
-                <LogoComponent theme={click ? 'dark' : 'light'} to={{pathname:"/"}}/>
+                {click ? <LogoComponent click={click} theme={click ? 'dark' : 'light'} to={{pathname:"/"}}/> : null }
                 <Box>
                     {/*<Particles style={{position:'absolute',top:0}} params={configStars}/>
                     <Particles style={{position:'absolute',top:0}} params={configLayerTwo}/>
@@ -193,14 +193,14 @@ const Main = () => {
                     
                 </Box>
                 
-                <SocialIcons style={{transition:'ease-out 0.4s'}} theme={click ? 'dark' : 'light'}/>
+                {click ? <SocialIcons click={click} style={{transition:'ease-out 0.4s'}} theme={click ? 'dark' : 'light'}/> : null }
 
                 <Center click={click}>
                     <GreenBird style={{cursor:'pointer'}} onClick={()=> handleClick()} width={click ? 120 : 200} height={click ? 120 : 200} fill='currentColor' />
                     <span style={{color:'#fff'}}>click me ↑</span>
                 </Center>
 
-                <Contact target="_blank" to={{pathname:"mailto:luorixo@gmail.com"}}>
+                {click ? <Contact click={click} target="_blank" to={{pathname:"mailto:luorixo@gmail.com"}}>
                     <motion.h2
                     initial={{
                         y:-200,
@@ -215,9 +215,9 @@ const Main = () => {
                     >
                         email me!
                     </motion.h2>
-                </Contact>
+                </Contact> : null }
                 
-                {click ? <BottomBar  click={click}>
+                {click ? <BottomBar click={click}>
                 <About to={{pathname:"/about"}} click={click}>
                     <motion.h2
                     initial={{
