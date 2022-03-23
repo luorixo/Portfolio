@@ -20,6 +20,10 @@ z-index: 3;
     margin: 0.5rem 0;
 }
 `
+const rotate = styled.div`
+transform: rotate(-90deg);
+color: #fff;
+`
 
 const Line = styled(motion.span)`
 width: 2px;
@@ -31,13 +35,10 @@ background-color: ${props => props.color === 'dark' ? darkTheme.text : darkTheme
 const SocialIcons = (props) => {
     return (
         <Icons>
-            
             <motion.div
             initial={{transform:"scale(0)"}}
             animate={{scale:[0,1.5,1]}}
             transition={{type:'spring', duration:1, delay:1.5}}
-            whileHover={{scale: 1.1}}
-            whileTap={{scale: 0.9}}
             >
                 <NavLink style={{color:'inherit'}} target="_blank" to={{pathname:"https://github.com/luorixo"}}>
                     <Github width={25} height={25} fill={props.theme === "dark" ? darkTheme.text : darkTheme.body }/>
@@ -61,6 +62,7 @@ const SocialIcons = (props) => {
                     <Email width={25} height={25} fill={props.theme === "dark" ? darkTheme.text : darkTheme.body }/>
                 </NavLink>
             </motion.div>
+
             <Line color={props.theme}
             initial={
                 {
@@ -69,7 +71,7 @@ const SocialIcons = (props) => {
                 }
             }
             animate={{
-                height: '8rem',
+                height: '20vh',
                 opacity: 1
             }}
             transition={{

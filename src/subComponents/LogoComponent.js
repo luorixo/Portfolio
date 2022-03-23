@@ -20,7 +20,7 @@ h1{
 position: fixed;
 left: 2rem;
 top: 1.5rem;
-z-index: 3;
+z-index: 5;
 `
 
 const LogoComponent = (props) => {
