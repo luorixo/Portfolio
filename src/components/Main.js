@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import React, { useState } from 'react'
 import styled, { keyframes } from 'styled-components'
 
@@ -26,7 +26,7 @@ bottom: 0;
 z-index: 1;
 `
 
-const MainContainer = styled.div`
+const MainContainer = styled(motion.div)`
 background: ${props => props.theme.body};
 background: #102F42;
 background: #007859;
@@ -108,7 +108,7 @@ color: ${props => props.theme.body};
 text-decoration: none;
 z-index: 1;
 `
-const rotate = keyframes`
+const bounce = keyframes`
 0% {
     /*transform: rotate(0);*/
     transform: translate(0, 0);
@@ -155,7 +155,7 @@ transition: all 1s ease;
 z-index: 10;
 
 &>:first-child {
-    animation: ${rotate} infinite 1.3s linear;
+    animation: ${bounce} infinite 1.1s linear;
 }
 
 &>:last-child {
@@ -181,19 +181,16 @@ const Main = () => {
     const handleClick = () => setClick(!click);
 
     return (
-        <MainContainer>
+        <MainContainer exit={{opacity: 0}}>
         <DarkDiv click={click}/>
             <Container>
                 {/*<PowerButton onClick={()=> handleClick()}/>*/}
-                {click ? <LogoComponent click={click} theme={click ? 'dark' : 'light'} to={{pathname:"/"}}/> : null }
+                {click ? <LogoComponent click={click} theme={click ? 'dark' : 'light'}/> : null }
                 <Box>
                     {/*<Particles style={{position:'absolute',top:0}} params={configStars}/>
                     <Particles style={{position:'absolute',top:0}} params={configLayerTwo}/>
                     <Particles style={{position:'absolute',top:0}} params={configLayerOne}/>*/}
                     <Particles style={{position:'absolute',top:0}} params={configFeathers}/>
-                 
-                    
-                    
                 </Box>
                 
                 {click ? <SocialIcons click={click} style={{transition:'ease-out 0.4s'}} theme={click ? 'dark' : 'light'}/> : null }
@@ -256,7 +253,9 @@ const Main = () => {
                 </BottomBar> : null }
                 
             </Container>
+            
             {click ? <Intro click={click}/> : null }
+            
         </MainContainer>
     )
 }

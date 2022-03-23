@@ -12,7 +12,7 @@ transition: ease-out 0.4s;
 -webkit-tap-highlight-color: transparent;
 
 h1{
-    font-family: 'Pacifico', cursive;
+    font-family: 'Source Sans Pro', sans-serif;
     font-size: 2em;
 }
 

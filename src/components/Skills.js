@@ -4,12 +4,12 @@ import { lightTheme } from './Themes'
 import { Design, Develope } from './AllSvgs'
 import LogoComponent from '../subComponents/LogoComponent'
 import SocialIcons from '../subComponents/SocialIcons'
-import PowerButton from '../subComponents/PowerButton'
 import ParticleComponent from '../subComponents/ParticleComponent'
 import { motion } from 'framer-motion';
 
-const Box = styled.div`
+const Box = styled(motion.div)`
 background-color: ${props => props.theme.body};
+background-color: #007859;
 width: 100vw;
 height: 100%;
 position: fixed;
@@ -74,10 +74,9 @@ const container = {
 const Skills = () => {
     return (
         <ThemeProvider theme={lightTheme}>
-            <Box>
-                <LogoComponent theme='light'/>
+            <Box exit={{opacity: 0}}>
+                <LogoComponent theme='dark' to={{pathname:"/"}}/>
                 <SocialIcons theme='light'/>
-                <PowerButton theme='light'/>
                 <ParticleComponent theme='dark'/>
                 <Main variants={container} initial='hidden' animate='show'>
                     <Title>
