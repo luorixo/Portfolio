@@ -65,55 +65,25 @@ const container = {
     show: {
         opacity: 1,
         transition: {
-            staggerChildren: 0.5,
-            duration: 0.5,
+            staggerChildren: 0,
+            duration: 0.3,
         }
     }
 }
 
 const Skills = () => {
     return (
-        <ThemeProvider theme={lightTheme}>
-            <Box exit={{opacity: 0}}>
-                <LogoComponent theme='dark' to={{pathname:"/"}}/>
-                <SocialIcons theme='light'/>
-                <ParticleComponent theme='dark'/>
-                <Main variants={container} initial='hidden' animate='show'>
-                    <Title>
-                        <Design width={40} height={40}/> Designer
-                    </Title>
-                    <Description>
-                        I love to create designs!.
-                    </Description>
-                    <Description>
-                        <strong>I like to design</strong>
-                        <ul>
-                            <li>
-                                Web Design
-                            </li>
-                            <li>
-                                React
-                            </li>
-                        </ul>
-                    </Description>
-                </Main>
-                <Main variants={container} initial='hidden' animate='show'>
-                    <Title>
-                        <Develope width={40} height={40}/> Developer
-                    </Title>
-                    <Description>
-                        I'm a student at somewhere somewhere.
-                    </Description>
-                    <Description>
-                    <strong>Skills</strong>
-                    <p>
-                    HTML, CSS, JS, React, Tailwind,     
-                    </p>
-                    </Description>
-                </Main>
-            </Box>
-
-        </ThemeProvider>
+        <Box variants={container}
+        initial='hidden'
+        animate='show'
+        exit={{
+            opacity:0, transition:{duration: 0.3}
+        }}>
+            <LogoComponent theme={'dark'}/> 
+            <SocialIcons theme='dark'/>
+            <ParticleComponent theme='dark'/>
+            
+        </Box>
     )
 }
 

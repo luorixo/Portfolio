@@ -14,6 +14,7 @@ transition: ease-out 0.4s;
 h1{
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 2em;
+    font-weight: normal;
 }
 
 position: fixed;
@@ -21,8 +22,6 @@ left: 2rem;
 top: 1.5rem;
 z-index: 3;
 `
-
-
 
 const LogoComponent = (props) => {
     return (

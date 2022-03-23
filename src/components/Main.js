@@ -175,17 +175,36 @@ transition: height 0.5s ease, width 1s ease 0.5s;
 z-index: 1;
 `
 
+// framer-motion config
+const container = {
+    hidden: {opacity:0},
+    show: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0,
+            duration: 0.3,
+        }
+    }
+}
+
 const Main = () => {
 
     const [click, setClick] = useState(false);
     const handleClick = () => setClick(!click);
 
     return (
-        <MainContainer exit={{opacity: 0}}>
+        <MainContainer variants={container}
+        initial='hidden'
+        animate='show'
+        exit={{
+            opacity:0, transition:{duration: 0.3}
+        }}>
+        
         <DarkDiv click={click}/>
+        {click ? <LogoComponent click={click} theme={'dark'}/> : null }
             <Container>
                 {/*<PowerButton onClick={()=> handleClick()}/>*/}
-                {click ? <LogoComponent click={click} theme={click ? 'dark' : 'light'}/> : null }
+                
                 <Box>
                     {/*<Particles style={{position:'absolute',top:0}} params={configStars}/>
                     <Particles style={{position:'absolute',top:0}} params={configLayerTwo}/>
@@ -200,7 +219,7 @@ const Main = () => {
                     <span style={{color:'#fff'}}>click me ↑</span>
                 </Center>
 
-                {click ? <Contact click={click} target="_blank" to={{pathname:"mailto:luorixo@gmail.com"}}>
+                {click ? <Contact target="_blank" to={{pathname:"mailto:luorixo@gmail.com"}}>
                     <motion.h2
                     initial={{
                         y:-200,
