@@ -17,19 +17,15 @@ left: 2rem;
 z-index: 3;
 
 &>*:not(:last-child) {
-    margin: 0.5rem 0;
+    margin-bottom: 1rem;
 }
-`
-const rotate = styled.div`
-transform: rotate(-90deg);
-color: #fff;
 `
 
 const Line = styled(motion.span)`
 width: 2px;
 transition: ease-out 0.4s;
 height: 8rem;
-background-color: ${props => props.color === 'dark' ? darkTheme.text : darkTheme.body };
+background-color: ${darkTheme.text}};
 `
 
 const SocialIcons = (props) => {
@@ -41,7 +37,7 @@ const SocialIcons = (props) => {
             transition={{type:'spring', duration:1, delay:1.5}}
             >
                 <NavLink style={{color:'inherit'}} target="_blank" to={{pathname:"https://github.com/luorixo"}}>
-                    <Github width={25} height={25} fill={props.theme === "dark" ? darkTheme.text : darkTheme.body }/>
+                    <Github width={25} height={25} fill={darkTheme.text}/>
                 </NavLink>
             </motion.div>
             <motion.div
@@ -50,7 +46,7 @@ const SocialIcons = (props) => {
             transition={{type:'spring', duration:1, delay:1.6}}
             >
                 <NavLink style={{color:'inherit'}} target="_blank" to={{pathname:"https://www.linkedin.com/in/eugene-j-chua/"}}>
-                    <Linkedin width={25} height={25} fill={props.theme === "dark" ? darkTheme.text : darkTheme.body }/>
+                    <Linkedin width={25} height={25} fill={darkTheme.text}/>
                 </NavLink>
             </motion.div>
             <motion.div
@@ -59,7 +55,7 @@ const SocialIcons = (props) => {
             transition={{type:'spring', duration:1, delay:1.7}}
             >
                 <NavLink style={{color:'inherit'}} target="_blank" to={{pathname:"mailto:luorixo@gmail.com"}}>
-                    <Email width={25} height={25} fill={props.theme === "dark" ? darkTheme.text : darkTheme.body }/>
+                    <Email width={25} height={25} fill={darkTheme.text}/>
                 </NavLink>
             </motion.div>
 
