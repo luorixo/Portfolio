@@ -64,11 +64,13 @@ const SocialIcons = (props) => {
             <Line color={props.theme}
             initial={
                 {
-                    height:0
+                    height:0,
+                    opacity: 0
                 }
             }
             animate={{
-                height: '8rem'
+                height: '8rem',
+                opacity: 1
             }}
             transition={{
                 type:'spring', duration:1, delay:0, mass: 0.01

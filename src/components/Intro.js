@@ -82,7 +82,8 @@ i {
 i:hover{
     opacity: 0.8;
     color: #007859;
-    transition: 0.3s;
+    color: #FF5349;
+    transition: 0.25s;
 }
 ` 
 

@@ -97,7 +97,7 @@ justify-content: space-evenly;
 `
 
 const About = styled(NavLink)`
-color: ${props => props.click ? props.theme.body : props.theme.text};
+color: ${props => props.theme.body};
 text-decoration: none;
 z-index: 1;
 transition: ease-out 0.4s;
@@ -201,10 +201,8 @@ const Main = () => {
         }}>
         
         <DarkDiv click={click}/>
-        {click ? <LogoComponent click={click} theme={'dark'}/> : null }
+        {click ? <LogoComponent theme={'dark'}/> : null }
             <Container>
-                {/*<PowerButton onClick={()=> handleClick()}/>*/}
-                
                 <Box>
                     {/*<Particles style={{position:'absolute',top:0}} params={configStars}/>
                     <Particles style={{position:'absolute',top:0}} params={configLayerTwo}/>
@@ -212,7 +210,7 @@ const Main = () => {
                     <Particles style={{position:'absolute',top:0}} params={configFeathers}/>
                 </Box>
                 
-                {click ? <SocialIcons click={click} style={{transition:'ease-out 0.4s'}} theme={click ? 'dark' : 'light'}/> : null }
+                {click ? <SocialIcons style={{transition:'ease-out 0.4s'}} theme={'dark'}/> : null }
 
                 <Center click={click}>
                     <GreenBird style={{cursor:'pointer'}} onClick={()=> handleClick()} width={click ? 120 : 200} height={click ? 120 : 200} fill='currentColor' alt='clickable green bird icon'/>
@@ -229,15 +227,15 @@ const Main = () => {
                         y:0,
                         transition: { type:'spring', bounce:0.4, duration: 2, delay:1.8}
                     }}
-                    whileHover={{scale: 1.1}}
+                    whileHover={{scale: 1.15}}
                     whileTap={{scale: 0.9}}
                     >
-                        email me!
+                        ✎ email me!
                     </motion.h2>
                 </Contact> : null }
                 
-                {click ? <BottomBar click={click}>
-                <About to={{pathname:"/about"}} click={click}>
+                {click ? <BottomBar>
+                <About to={{pathname:"/about"}}>
                     <motion.h2
                     initial={{
                         y:200,
@@ -247,10 +245,10 @@ const Main = () => {
                         y:0,
                         transition: { type:'spring', bounce:0.4, duration: 2, delay:1.6}
                     }}
-                    whileHover={{scale: 1.1}}
+                    whileHover={{scale: 1.15}}
                     whileTap={{scale: 0.9}}
                     >
-                        About.
+                        ➪ About.
                     </motion.h2>
                 </About>
                 <Projects to={{pathname:"/skills"}}>
@@ -263,17 +261,17 @@ const Main = () => {
                         y:0,
                         transition: { type:'spring', bounce:0.4, duration: 2, delay:1.7}
                     }}
-                    whileHover={{scale: 1.1}}
+                    whileHover={{scale: 1.15}}
                     whileTap={{scale: 0.9}}
                     >
-                        My Projects.
+                        ➪ My Projects.
                     </motion.h2>
                 </Projects>
                 </BottomBar> : null }
                 
             </Container>
             
-            {click ? <Intro click={click}/> : null }
+            {click ? <Intro/> : null }
             
         </MainContainer>
     )
