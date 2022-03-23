@@ -15,12 +15,12 @@ display: flex;
 
 background: linear-gradient(
     to right,
-    ${props => props.theme.body} 50%,
-    ${props => props.theme.text} 50%) bottom,
+    ${props => props.theme.body} 0%,
+    ${props => props.theme.text} 0%) bottom,
     linear-gradient(
     to right,
-    ${props => props.theme.body} 50%,
-    ${props => props.theme.text} 100%) top;
+    ${props => props.theme.body} 00%,
+    ${props => props.theme.text} 00%) top;
 
     background-repeat: no-repeat;
     background-size: 100% 2px;
@@ -46,39 +46,45 @@ text-align: justify;
 `
 
 const Text = styled.div`
-font-size: calc(0.8em + 1.5vw);
+font-size: calc(0.5em + 2.3vw);
 color: ${props => props.theme.body};
-padding: 2rem;
+padding: 0rem 3vw 1.75vh 3vw;
 cursor: auto;
 
 display: flex;
 flex-direction: column;
-justify-content: space-evenly;
+justify-content: space-between;
 
 &>*:nth-last-child(3){
     color: ${props => `rgba(${props.theme.textRgba},0.75)` };
     font-size: calc(0.35rem + 1.5vw);
     font-weight: 300;
-    margin-top: 1.5rem
+    margin-top: 1.5vh
 }
 
 &>*:nth-last-child(2){
     color: ${props => `rgba(${props.theme.textRgba},0.75)` };
     font-size: calc(0.35rem + 1.5vw);
     font-weight: 300;
-    margin-top: 0.4rem;
-}
-
-icons{
-    margin-top: 1rem;
+    margin-top: 4vh;
 }
 
 i:not(:last-child){
     margin-right: 0.9rem;
 }
 
+i {
+    -webkit-transition: 0.3s;
+}
+
 i:hover{
     opacity: 0.8;
+    color: #007859;
+    transition: 0.3s;
+}
+
+rhover {
+
 }
 ` 
 
@@ -86,14 +92,14 @@ const Intro = () => {
     return (
         <Box
         initial={{height:'0vh'}}
-        animate={{height:'55vh'}}
+        animate={{height:'50vh'}}
         transition={{type:'spring', bounce:0.4, duration:1.8, delay:0}}
         >
             <SubBox>
                 <Text>
                     <h1>Hey!</h1>
                     <h2>I'm Eugene.</h2>
-                    <h6>I'm doing software engineering @ the University of Auckland.</h6>
+                    <h6>I do software engineering @ the University of Auckland.<br/>I <i class="fa-solid fa-heart"></i> plants, books, and tech!</h6>
                     <h6>I've worked with:</h6>
                     <icons>
                         <i class="fa-brands fa-python fa-lg"></i>

@@ -29,6 +29,7 @@ z-index: 0;
 const MainContainer = styled.div`
 background: ${props => props.theme.body};
 background: #102F42;
+background: #007859;
 /*background-image: url();
 background-size: cover;
 background-repeat: no-repeat;
@@ -209,7 +210,7 @@ const Main = () => {
                     }}
                     animate={{
                         y:0,
-                        transition: { type:'spring', bounce:0.4, duration: 2.2, delay:1.7}
+                        transition: { type:'spring', bounce:0.4, duration: 2.2, delay:1.8}
                     }}
                     whileHover={{scale: 1.1}}
                     whileTap={{scale: 0.9}}
@@ -227,7 +228,7 @@ const Main = () => {
                     }}
                     animate={{
                         y:0,
-                        transition: { type:'spring', bounce:0.4, duration: 2.2, delay:1.7}
+                        transition: { type:'spring', bounce:0.4, duration: 2.2, delay:1.8}
                     }}
                     whileHover={{scale: 1.1}}
                     whileTap={{scale: 0.9}}
@@ -243,7 +244,7 @@ const Main = () => {
                     }}
                     animate={{
                         y:0,
-                        transition: { type:'spring', bounce:0.4, duration: 2.2, delay:1.7}
+                        transition: { type:'spring', bounce:0.4, duration: 2.2, delay:1.8}
                     }}
                     whileHover={{scale: 1.1}}
                     whileTap={{scale: 0.9}}
