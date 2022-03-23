@@ -12,6 +12,7 @@ transform: translate(-50%, -50%);
 width: 65vw;
 height:55vh;
 display: flex;
+z-index: 2;
 
 background: linear-gradient(
     to right,

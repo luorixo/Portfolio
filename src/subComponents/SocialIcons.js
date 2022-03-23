@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 import { Email, Github, Linkedin } from '../components/AllSvgs';
 import {darkTheme} from '../components/Themes'
+import { motion } from "framer-motion";
 
 const Icons = styled.div`
 display: flex;
@@ -20,7 +21,7 @@ z-index: 3;
 }
 `
 
-const Line = styled.span`
+const Line = styled(motion.span)`
 width: 2px;
 transition: ease-out 0.4s;
 height: 8rem;
@@ -30,22 +31,49 @@ background-color: ${props => props.color === 'dark' ? darkTheme.text : darkTheme
 const SocialIcons = (props) => {
     return (
         <Icons>
-            <div>
+            
+            <motion.div
+            initial={{transform:"scale(0)"}}
+            animate={{scale:[0,1.5,1]}}
+            transition={{type:'spring', duration:1, delay:1.5}}
+            whileHover={{scale: 1.1}}
+            whileTap={{scale: 0.9}}
+            >
                 <NavLink style={{color:'inherit'}} target="_blank" to={{pathname:"https://github.com/luorixo"}}>
                     <Github width={25} height={25} fill={props.theme === "dark" ? darkTheme.text : darkTheme.body }/>
                 </NavLink>
-            </div>
-            <div>
+            </motion.div>
+            <motion.div
+            initial={{transform:"scale(0)"}}
+            animate={{scale:[0,1.5,1]}}
+            transition={{type:'spring', duration:1, delay:1.6}}
+            >
                 <NavLink style={{color:'inherit'}} target="_blank" to={{pathname:"https://www.linkedin.com/in/eugene-j-chua/"}}>
                     <Linkedin width={25} height={25} fill={props.theme === "dark" ? darkTheme.text : darkTheme.body }/>
                 </NavLink>
-            </div>
-            <div>
+            </motion.div>
+            <motion.div
+            initial={{transform:"scale(0)"}}
+            animate={{scale:[0,1.5,1]}}
+            transition={{type:'spring', duration:1, delay:1.7}}
+            >
                 <NavLink style={{color:'inherit'}} target="_blank" to={{pathname:"mailto:luorixo@gmail.com"}}>
                     <Email width={25} height={25} fill={props.theme === "dark" ? darkTheme.text : darkTheme.body }/>
                 </NavLink>
-            </div>
-            <Line color={props.theme}/>
+            </motion.div>
+            <Line color={props.theme}
+            initial={
+                {
+                    height:0
+                }
+            }
+            animate={{
+                height: '8rem'
+            }}
+            transition={{
+                type:'spring', duration:1, delay:0, mass: 0.01
+            }}
+            />
         </Icons>  
     )
 }

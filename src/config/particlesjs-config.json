@@ -55,7 +55,7 @@
     "move": {
       "enable": true,
       "speed": 4,
-      "direction": "bottom-right",
+      "direction": "bottom-left",
       "random": false,
       "straight": false,
       "out_mode": "out",
@@ -71,11 +71,11 @@
     "detect_on": "window",
     "events": {
       "onhover": {
-        "enable": false,
-        "mode": "repulse"
+        "enable": true,
+        "mode": "bubble"
       },
       "onclick": {
-        "enable": true,
+        "enable": false,
         "mode": "push"
       },
       "resize": true

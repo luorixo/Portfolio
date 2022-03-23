@@ -7,7 +7,7 @@ import Particles from 'react-particles-js';
 import configLayerOne from "../config/particlesjs-config-layer-one.json"
 import configLayerTwo from "../config/particlesjs-config-layer-two.json"
 import configStars from "../config/particlesjs-config-stars.json"
-import configDragon from "../config/particlesjs-config-dragon.json"
+import configFeathers from "../config/particlesjs-config.json"
 
 import PowerButton from '../subComponents/PowerButton'
 import LogoComponent from '../subComponents/LogoComponent'
@@ -23,7 +23,7 @@ top: 0;
 right: 0;
 left: 0;
 bottom: 0;
-z-index: 0;
+z-index: 1;
 `
 
 const MainContainer = styled.div`
@@ -171,7 +171,7 @@ bottom: 0;
 right: 0%;
 width: ${props => props.click ? '100%' : '0%'};
 height: ${props => props.click ? '100%' : '1%'};
-transition: height 0.5s ease, width 1.5s ease 0.8s;
+transition: height 0.5s ease, width 1s ease 0.5s;
 z-index: 1;
 `
 
@@ -189,8 +189,9 @@ const Main = () => {
                 <Box>
                     {/*<Particles style={{position:'absolute',top:0}} params={configStars}/>
                     <Particles style={{position:'absolute',top:0}} params={configLayerTwo}/>
-                    {/*<Particles style={{position:'absolute',top:0}} params={configDragon}/>
-                 <Particles style={{position:'absolute',top:0}} params={configLayerOne}/>*/}
+                    <Particles style={{position:'absolute',top:0}} params={configLayerOne}/>*/}
+                    <Particles style={{position:'absolute',top:0}} params={configFeathers}/>
+                 
                     
                     
                 </Box>
@@ -210,7 +211,7 @@ const Main = () => {
                     }}
                     animate={{
                         y:0,
-                        transition: { type:'spring', bounce:0.4, duration: 2.2, delay:1.8}
+                        transition: { type:'spring', bounce:0.4, duration: 2, delay:1.8}
                     }}
                     whileHover={{scale: 1.1}}
                     whileTap={{scale: 0.9}}
@@ -228,7 +229,7 @@ const Main = () => {
                     }}
                     animate={{
                         y:0,
-                        transition: { type:'spring', bounce:0.4, duration: 2.2, delay:1.8}
+                        transition: { type:'spring', bounce:0.4, duration: 2, delay:1.6}
                     }}
                     whileHover={{scale: 1.1}}
                     whileTap={{scale: 0.9}}
@@ -244,7 +245,7 @@ const Main = () => {
                     }}
                     animate={{
                         y:0,
-                        transition: { type:'spring', bounce:0.4, duration: 2.2, delay:1.8}
+                        transition: { type:'spring', bounce:0.4, duration: 2, delay:1.7}
                     }}
                     whileHover={{scale: 1.1}}
                     whileTap={{scale: 0.9}}
