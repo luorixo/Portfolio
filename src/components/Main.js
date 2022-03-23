@@ -103,7 +103,7 @@ z-index: 1;
 transition: ease-out 0.4s;
 `
 
-const Skills = styled(NavLink)`
+const Projects = styled(NavLink)`
 color: ${props => props.theme.body};
 text-decoration: none;
 z-index: 1;
@@ -237,7 +237,7 @@ const Main = () => {
                         About.
                     </motion.h2>
                 </About>
-                <Skills to={{pathname:"/skills"}}>
+                <Projects to={{pathname:"/skills"}}>
                     <motion.h2
                     initial={{
                         y:200,
@@ -250,9 +250,9 @@ const Main = () => {
                     whileHover={{scale: 1.1}}
                     whileTap={{scale: 0.9}}
                     >
-                        Skills.
+                        My Projects.
                     </motion.h2>
-                </Skills>
+                </Projects>
                 </BottomBar> : null }
                 
             </Container>

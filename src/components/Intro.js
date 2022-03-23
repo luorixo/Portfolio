@@ -14,19 +14,21 @@ height:55vh;
 display: flex;
 z-index: 2;
 
-background: linear-gradient(
+background: 
+
+    /*linear-gradient(
     to right,
     ${props => props.theme.body} 0%,
     ${props => props.theme.text} 0%) bottom,
     linear-gradient(
     to right,
     ${props => props.theme.body} 00%,
-    ${props => props.theme.text} 00%) top;
+    ${props => props.theme.text} 00%) top;*/
 
     background-repeat: no-repeat;
     background-size: 100% 2px;
     border-left: 2px solid ${props => props.theme.body};
-    border-right: 2px solid ${props => props.theme.text};
+    /*border-right: 2px solid ${props => props.theme.text};*/
     z-index:1;
 `
 
@@ -83,10 +85,6 @@ i:hover{
     color: #007859;
     transition: 0.3s;
 }
-
-rhover {
-
-}
 ` 
 
 const Intro = () => {
@@ -103,11 +101,11 @@ const Intro = () => {
                     <h6>I do software engineering @ the University of Auckland.<br/>I <i class="fa-solid fa-heart"></i> plants, books, and tech!</h6>
                     <h6>I've worked with:</h6>
                     <icons>
-                        <i class="fa-brands fa-python fa-lg"></i>
-                        <i class="fa-brands fa-js fa-lg" title="JavaScript"></i>
-                        <i class="fa-brands fa-react fa-lg"></i>
-                        <i class="fa-brands fa-github fa-lg"></i>
-                        <i class="fa-brands fa-git-alt fa-lg"></i>
+                        <i class="fa-brands fa-python"></i>
+                        <i class="fa-brands fa-js" title="JavaScript"></i>
+                        <i class="fa-brands fa-react"></i>
+                        <i class="fa-brands fa-github"></i>
+                        <i class="fa-brands fa-git-alt"></i>
                     </icons>
                 </Text>
             </SubBox>
