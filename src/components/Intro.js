@@ -15,21 +15,20 @@ display: flex;
 z-index: 2;
 
 background: 
+/*linear-gradient(
+to right,
+${props => props.theme.body} 0%,
+${props => props.theme.text} 0%) bottom,
+linear-gradient(
+to right,
+${props => props.theme.body} 00%,
+${props => props.theme.text} 00%) top;*/
 
-    /*linear-gradient(
-    to right,
-    ${props => props.theme.body} 0%,
-    ${props => props.theme.text} 0%) bottom,
-    linear-gradient(
-    to right,
-    ${props => props.theme.body} 00%,
-    ${props => props.theme.text} 00%) top;*/
-
-    background-repeat: no-repeat;
-    background-size: 100% 2px;
-    border-left: 2px solid ${props => props.theme.body};
-    /*border-right: 2px solid ${props => props.theme.text};*/
-    z-index:1;
+background-repeat: no-repeat;
+background-size: 100% 2px;
+border-left: 2px solid ${props => props.theme.body};
+/*border-right: 2px solid ${props => props.theme.text};*/
+z-index:1;
 `
 
 const SubBox = styled.div`
@@ -91,7 +90,7 @@ const Intro = () => {
     return (
         <Box
         initial={{height:'0vh'}}
-        animate={{height:'50vh'}}
+        animate={{height:'min(50vw, 50vh)'}}
         transition={{type:'spring', bounce:0.4, duration:1.8, delay:0}}
         >
             <SubBox>
