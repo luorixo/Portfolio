@@ -12,9 +12,9 @@ transition: ease-out 0.4s;
 -webkit-tap-highlight-color: transparent;
 
 h1{
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: "Karla", sans-serif !important;
     font-size: 2em;
-    font-weight: normal;
+    font-weight: 500 !important;
 }
 
 position: fixed;

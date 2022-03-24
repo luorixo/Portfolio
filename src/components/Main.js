@@ -9,12 +9,11 @@ import configLayerTwo from "../config/particlesjs-config-layer-two.json"
 import configStars from "../config/particlesjs-config-stars.json"
 import configFeathers from "../config/particlesjs-config.json"
 
-import PowerButton from '../subComponents/PowerButton'
 import LogoComponent from '../subComponents/LogoComponent'
+import ContactComponent from '../subComponents/Contact';
 import SocialIcons from '../subComponents/SocialIcons'
 import { NavLink } from 'react-router-dom'
 import { GreenBird } from './AllSvgs'
-//import img from "../assets/Images/hills.png"
 import Intro from './Intro'
 
 const Box = styled.div`
@@ -51,36 +50,6 @@ h1, h2, h3, h4, h5, h6 {
 const Container = styled.div`
 padding: 20rem;
 left: 20%;
-`
-const Contact = styled(NavLink)`
-color: ${props => props.theme.text};
-color: ${props => props.theme.body};
-position: absolute;
-top: 2rem;
-right: calc(1rem + 2vw);
-text-decoration: none;
-z-index: 1;
-`
-
-const Blog = styled(NavLink)`
-color: ${props => props.theme.text};
-position: absolute;
-top: 50%;
-right: calc(1rem + 2vw);
-transform: rotate(90deg) translate(-50%, -50%);
-text-decoration: none;
-z-index: 1;
-`
-
-const Work = styled(NavLink)`
-color: ${props => props.click ? props.theme.body : props.theme.text};
-position: absolute;
-top: 50%;
-left: calc(1rem + 2vw);
-transform: translate(-50%, -50%) rotate(-90deg);
-text-decoration: none;
-z-index: 1;
-transition: ease-out 0.4s;
 `
 
 const BottomBar = styled.div`
@@ -181,8 +150,7 @@ const container = {
     show: {
         opacity: 1,
         transition: {
-            staggerChildren: 0,
-            duration: 0.3,
+            duration: 0.25,
         }
     }
 }
@@ -197,7 +165,7 @@ const Main = () => {
         initial='hidden'
         animate='show'
         exit={{
-            opacity:0, transition:{duration: 0.3}
+            opacity:0, transition:{duration: 0.25}
         }}>
         
         <DarkDiv click={click}/>
@@ -217,22 +185,7 @@ const Main = () => {
                     <span style={{color:'#fff'}}>click me ↑</span>
                 </Center>
 
-                {click ? <Contact target="_blank" to={{pathname:"mailto:luorixo@gmail.com"}}>
-                    <motion.h2
-                    initial={{
-                        y:-200,
-                        transition: { type:'spring', duration: 1.5, delay:0}
-                    }}
-                    animate={{
-                        y:0,
-                        transition: { type:'spring', bounce:0.4, duration: 2, delay:1.8}
-                    }}
-                    whileHover={{scale: 1.15}}
-                    whileTap={{scale: 0.9}}
-                    >
-                        ✎ email me!
-                    </motion.h2>
-                </Contact> : null }
+                {click ? <ContactComponent/>: null }
                 
                 {click ? <BottomBar>
                 <About to={{pathname:"/about"}}>
@@ -251,7 +204,7 @@ const Main = () => {
                         ➪ About.
                     </motion.h2>
                 </About>
-                <Projects to={{pathname:"/skills"}}>
+                <Projects to={{pathname:"/projects"}}>
                     <motion.h2
                     initial={{
                         y:200,

@@ -8,7 +8,7 @@ import GlobalStyle from "./globalStyles"
 // components
 import Main from './components/Main';
 import About from './components/About';
-import Skills from './components/Skills';
+import Projects from './components/Projects';
 import { AnimatePresence } from "framer-motion"
 
 function App() {
@@ -23,7 +23,7 @@ function App() {
       <Switch location={location} key={location.pathname}>
         <Route exact path="/" component={Main}/>
         <Route exact path="/about" component={About}/>
-        <Route exact path="/skills" component={Skills}/>
+        <Route exact path="/projects" component={Projects}/>
       </Switch>
       </AnimatePresence>
       </ThemeProvider>

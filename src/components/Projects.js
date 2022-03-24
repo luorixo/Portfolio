@@ -6,10 +6,13 @@ import LogoComponent from '../subComponents/LogoComponent'
 import SocialIcons from '../subComponents/SocialIcons'
 import ParticleComponent from '../subComponents/ParticleComponent'
 import { motion } from 'framer-motion';
+import ContactComponent from '../subComponents/Contact'
 
 const Box = styled(motion.div)`
 background-color: ${props => props.theme.body};
-background-color: #007859;
+
+background-color: ${props => props.theme.text};
+background-color: #C2DC71;
 width: 100vw;
 height: 100%;
 position: fixed;
@@ -65,21 +68,21 @@ const container = {
     show: {
         opacity: 1,
         transition: {
-            staggerChildren: 0,
-            duration: 0.3,
+            duration: 0.25,
         }
     }
 }
 
-const Skills = () => {
+const Projects = () => {
     return (
         <Box variants={container}
         initial='hidden'
         animate='show'
         exit={{
-            opacity:0, transition:{duration: 0.3}
+            opacity:0, transition:{duration: 0.25}
         }}>
             <LogoComponent theme={'dark'}/> 
+            <ContactComponent/>
             <SocialIcons theme='dark'/>
             <ParticleComponent theme='dark'/>
             
@@ -87,4 +90,4 @@ const Skills = () => {
     )
 }
 
-export default Skills
+export default Projects
