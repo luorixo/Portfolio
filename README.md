@@ -1,4 +1,6 @@
 # Portfolio Website
+My personal portfolio website made using ReactJS, Framer motion, and styled components.
+Check it out here: https://echua.top
 
 ### Resources Used in this Project:
 
