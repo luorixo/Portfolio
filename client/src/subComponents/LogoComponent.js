@@ -13,12 +13,12 @@ transition: ease-out 0.4s;
 
 h1{
     font-family: "Karla", sans-serif !important;
-    font-size: 2em;
+    font-size: calc(1.6em + 0.5vw) !important;
     font-weight: 500 !important;
 }
 
 position: fixed;
-left: 2rem;
+left: calc(0.8rem + 1.3vw);
 top: 1.5rem;
 z-index: 5;
 `

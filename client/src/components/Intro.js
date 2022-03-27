@@ -57,6 +57,10 @@ display: flex;
 flex-direction: column;
 justify-content: space-between;
 
+h2{
+    font-size: calc(1.2em + 1vw) !important;
+}
+
 &>*:nth-last-child(3){
     color: ${props => `rgba(${props.theme.textRgba},0.75)` };
     font-size: calc(0.8rem + 1.1vw);

@@ -12,7 +12,7 @@ align-items: center;
 
 position: fixed;
 bottom: 0;
-left: 2rem;
+left: calc(0.8rem + 1.3vw);
 
 z-index: 3;
 
@@ -37,7 +37,7 @@ const SocialIcons = (props) => {
             transition={{type:'spring', duration:1, delay:1.5}}
             >
                 <NavLink style={{color:'inherit'}} target="_blank" to={{pathname:"https://github.com/luorixo"}}>
-                    <Github width={25} height={25} fill={darkTheme.text}/>
+                    <Github width={'max(1.8vw, 2.8vh)'} height={'max(1.8vw, 2.8vh)'} fill={darkTheme.text}/>
                 </NavLink>
             </motion.div>
             <motion.div
@@ -46,7 +46,7 @@ const SocialIcons = (props) => {
             transition={{type:'spring', duration:1, delay:1.6}}
             >
                 <NavLink style={{color:'inherit'}} target="_blank" to={{pathname:"https://www.linkedin.com/in/eugene-j-chua/"}}>
-                    <Linkedin width={25} height={25} fill={darkTheme.text}/>
+                    <Linkedin width={'max(1.8vw, 2.8vh)'} height={'max(1.8vw, 2.8vh)'} fill={darkTheme.text}/>
                 </NavLink>
             </motion.div>
             <motion.div
@@ -55,7 +55,7 @@ const SocialIcons = (props) => {
             transition={{type:'spring', duration:1, delay:1.7}}
             >
                 <NavLink style={{color:'inherit'}} target="_blank" to={{pathname:"mailto:luorixo@gmail.com"}}>
-                    <Email width={25} height={25} fill={darkTheme.text}/>
+                    <Email width={'max(1.8vw, 2.8vh)'} height={'max(1.8vw, 2.8vh)'} fill={darkTheme.text}/>
                 </NavLink>
             </motion.div>
 

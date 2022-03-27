@@ -42,6 +42,10 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Karla', sans-serif;
     font-weight: 500;
 }
+
+h2 {
+    font-size: calc(1.1em + 0.55vw);
+}
 `
 
 const Container = styled.div`
@@ -105,8 +109,8 @@ const bounce = keyframes`
 
 const Center = styled.button`
 position: absolute;
-top: ${props => props.click ? '85%' :'50%'  };
-left: ${props => props.click ? '92%' :'50%'  };
+top: ${props => props.click ? '85%' :'50%'};
+left: ${props => props.click ? '91%' :'50%'};
 transform: translate(-50%, -50%);
 border: none;
 outline: none;
@@ -175,7 +179,7 @@ const Main = () => {
                 {click ? <SocialIcons style={{transition:'ease-out 0.4s'}} theme={'dark'}/> : null }
 
                 <Center click={click}>
-                    <GreenBird style={{cursor:'pointer'}} onClick={()=> handleClick()} width={click ? 'min(14vw, 15vh)' : 'max(16vw, 20vh)'} height={click ? 'min(14vw, 15vh)' : 'max(16vw, 20vh)'} fill='currentColor' alt='clickable green bird icon'/>
+                    <GreenBird style={{cursor:'pointer'}} onClick={()=> handleClick()} width={click ? 'min(14vw, 15vh)' : 'max(15vw, 20vh)'} height={click ? 'min(14vw, 15vh)' : 'max(15vw, 20vh)'} fill='currentColor' alt='clickable green bird icon'/>
                     <span style={{color:'#fff'}}>click me ↑</span>
                 </Center>
 

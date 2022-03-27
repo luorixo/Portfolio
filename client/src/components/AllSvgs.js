@@ -1,6 +1,8 @@
 // Create all svg's as react components here
 // Using SVGR
 
+import { motion } from "framer-motion";
+
 export const GreenBird = (props) => {
   return (
     <svg

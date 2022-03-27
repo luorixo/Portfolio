@@ -8,7 +8,7 @@ color: ${props => props.theme.text};
 color: ${props => props.theme.body};
 position: absolute;
 top: 2rem;
-right: calc(1rem + 2vw);
+right: calc(0.8rem + 1.3vw);
 text-decoration: none;
 z-index: 1;
 
