@@ -175,7 +175,7 @@ const Main = () => {
                 {click ? <SocialIcons style={{transition:'ease-out 0.4s'}} theme={'dark'}/> : null }
 
                 <Center click={click}>
-                    <GreenBird style={{cursor:'pointer'}} onClick={()=> handleClick()} width={click ? 120 : 200} height={click ? 120 : 200} fill='currentColor' alt='clickable green bird icon'/>
+                    <GreenBird style={{cursor:'pointer'}} onClick={()=> handleClick()} width={click ? 'min(14vw, 17vh)' : 'max(15vw, 25vh)'} height={click ? 'min(14vw, 17vh)' : 'max(15vw, 25vh)'} fill='currentColor' alt='clickable green bird icon'/>
                     <span style={{color:'#fff'}}>click me ↑</span>
                 </Center>
 

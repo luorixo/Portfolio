@@ -48,7 +48,7 @@ text-align: justify;
 `
 
 const Text = styled.div`
-font-size: calc(0.5em + 2.3vw);
+font-size: calc(1em + 2vw);
 color: ${props => props.theme.body};
 padding: 0rem 3vw 1.75vh 3vw;
 cursor: auto;
@@ -59,14 +59,14 @@ justify-content: space-between;
 
 &>*:nth-last-child(3){
     color: ${props => `rgba(${props.theme.textRgba},0.75)` };
-    font-size: calc(0.35rem + 1.5vw);
+    font-size: calc(0.8rem + 1.1vw);
     font-weight: 300;
     margin-top: 1.5vh
 }
 
 &>*:nth-last-child(2){
     color: ${props => `rgba(${props.theme.textRgba},0.75)` };
-    font-size: calc(0.35rem + 1.5vw);
+    font-size: calc(0.5rem + 1.3vw);
     font-weight: 300;
     margin-top: 4vh;
 }
