@@ -1,0 +1,19 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "My personal portfolio website made using ReactJS, Framer motion, and styled components.<br/> Check it out here: https://echua.top",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/luorixo/Portfolio.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luorixo/Portfolio/issues"
+  },
+  "homepage": "https://github.com/luorixo/Portfolio#readme"
+}

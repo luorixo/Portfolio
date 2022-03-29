@@ -121,7 +121,7 @@ display: flex;
 flex-direction: column;
 justify-content: center;
 align-items: center;
-transition: all 1s ease;
+transition: all 1.1s ease;
 z-index: 10;
 
 &>:first-child {
@@ -130,7 +130,7 @@ z-index: 10;
 
 &>:last-child {
     display: ${props => props.click ? 'none' : 'inline-block' };
-    padding-top: 1rem;
+    margin-top: 1rem;
 }
 `
 const DarkDiv = styled.div`
