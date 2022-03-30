@@ -44,7 +44,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h2 {
-    font-size: calc(1.1em + 0.55vw);
+    font-size: calc(1.1]em + 0.55vw);
 }
 `
 
@@ -66,7 +66,7 @@ display: flex;
 justify-content: space-evenly;
 `
 
-const About = styled(NavLink)`
+const Blog = styled(NavLink)`
 color: ${props => props.theme.body};
 text-decoration: none;
 z-index: 1;
@@ -186,7 +186,7 @@ const Main = () => {
                 {click ? <ContactComponent/>: null }
                 
                 {click ? <BottomBar>
-                <About to={{pathname:"/about"}}>
+                <Blog to={{pathname:"/blog"}}>
                     <motion.h2
                     initial={{
                         y:200,
@@ -199,9 +199,9 @@ const Main = () => {
                     whileHover={{scale: 1.15}}
                     whileTap={{scale: 0.9}}
                     >
-                        ➪ About.
+                        ➪ My Blog.
                     </motion.h2>
-                </About>
+                </Blog>
                 <Projects to={{pathname:"/projects"}}>
                     <motion.h2
                     initial={{

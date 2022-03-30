@@ -7,7 +7,7 @@ import GlobalStyle from "./globalStyles"
 
 // components
 import Main from './components/Main';
-import About from './components/About';
+import Blog from './components/Blog';
 import Projects from './components/Projects';
 import { AnimatePresence } from "framer-motion"
 
@@ -22,7 +22,7 @@ function App() {
       <AnimatePresence exitBeforeEnter>
       <Switch location={location} key={location.pathname}>
         <Route exact path="/" component={Main}/>
-        <Route exact path="/about" component={About}/>
+        <Route exact path="/blog" component={Blog}/>
         <Route exact path="/projects" component={Projects}/>
       </Switch>
       </AnimatePresence>
