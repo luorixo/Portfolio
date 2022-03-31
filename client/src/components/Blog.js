@@ -6,30 +6,29 @@ import ParticleComponent from '../subComponents/ParticleComponent'
 import { motion } from 'framer-motion';
 import ContactComponent from '../subComponents/Contact'
 
-const Box = styled(motion.div)`
-    text-align: center;
-    height: 100%;
-`
 
-const GlobalStyle = createGlobalStyle`
-body {
-    background-color: #C2DCAA;
-}
+const Box = styled(motion.div)`
+width: 100vw;
+min-height: 100vh;
+background-color: #C2DDDD;
 `
 
 const MainGrid = styled(motion.div)`
-border: 2px solid black;
-position: absolute;
-left: 50%;
-top: max(20%, 6rem);
-transform: translate(-50%, -50%);
-height: auto;
-
+padding-top: max(9%, 8rem);
+margin: auto;
 width: 65vw;
 
 display: grid;
-grid-template-columns: repeat(2, minmax(calc(10rem + 15vw), 1fr));
-grid-gap: calc(1rem + 2vw);
+align-items: center;
+grid-template-columns: repeat(auto-fit, minmax(calc(8rem + 15vw), 1fr));
+grid-gap: calc(0.5rem + 1vw);
+`
+
+const Entry = styled(motion.div)`
+background: #fff;
+border: 1px solid red;
+height: 200px;
+z-index: 0;
 `
 
 // framer-motion config
@@ -51,18 +50,19 @@ const Blog = () => {
         exit={{
             opacity:0, transition:{duration: 0.25}
         }}>
-            <GlobalStyle/>
+            
             <LogoComponent theme={'dark'}/> 
             <ContactComponent/>
             <SocialIcons theme='dark'/>
             <ParticleComponent theme='dark'/>
-            <MainGrid>
-                <div>Entry1</div>
-                <div>Entry2</div>
-            
-
-
-            </MainGrid>
+                <MainGrid>
+                    <Entry>I'm a blog</Entry>
+                    <Entry>I'm a blog</Entry>
+                    <Entry>I'm a blog</Entry>
+                    <Entry>I'm a blog</Entry>
+                    <Entry>I'm a blog</Entry>
+                    <Entry>I'm a blog</Entry> 
+                </MainGrid>
         </Box>
     )
 }

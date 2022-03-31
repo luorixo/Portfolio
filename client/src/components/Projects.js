@@ -7,9 +7,6 @@ import { motion } from 'framer-motion';
 import ContactComponent from '../subComponents/Contact'
 
 const Box = styled(motion.div)`
-background-color: ${props => props.theme.body};
-
-background-color: ${props => props.theme.text};
 background-color: #C2DC71;
 width: 100vw;
 height: 100%;

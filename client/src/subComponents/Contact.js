@@ -4,9 +4,8 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 
 const Contact = styled(NavLink)`
-color: ${props => props.theme.text};
 color: ${props => props.theme.body};
-position: absolute;
+position: fixed;
 top: 2rem;
 right: calc(0.8rem + 1.3vw);
 text-decoration: none;

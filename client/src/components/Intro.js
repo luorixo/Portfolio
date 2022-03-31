@@ -48,7 +48,7 @@ text-align: justify;
 `
 
 const Text = styled.div`
-font-size: calc(1em + 2vw);
+font-size: calc(1.1em + 2vw);
 color: ${props => props.theme.body};
 padding: 0rem 3vw 1.75vh 3vw;
 cursor: auto;

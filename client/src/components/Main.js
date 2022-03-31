@@ -23,14 +23,7 @@ z-index: 1;
 `
 
 const MainContainer = styled(motion.div)`
-background: ${props => props.theme.body};
-background: #102F42;
 background: #007859;
-/*background-image: url();
-background-size: cover;
-background-repeat: no-repeat;
-background-attachment: fixed;
-background-position: center;*/
 width: 100vw;
 height: 100%;
 overflow: hidden;
