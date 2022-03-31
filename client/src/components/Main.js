@@ -103,7 +103,7 @@ const bounce = keyframes`
 const Center = styled.button`
 position: absolute;
 top: ${props => props.click ? '85%' :'50%'};
-left: ${props => props.click ? '91%' :'50%'};
+left: ${props => props.click ? '92%' :'50%'};
 transform: translate(-50%, -50%);
 border: none;
 outline: none;
@@ -129,6 +129,7 @@ z-index: 10;
 const DarkDiv = styled.div`
 position: absolute;
 background-color: #C2DC71;
+background-color: #d4e69b;
 top: 0;
 bottom: 0;
 right: 0%;
@@ -172,7 +173,7 @@ const Main = () => {
                 {click ? <SocialIcons style={{transition:'ease-out 0.4s'}} theme={'dark'}/> : null }
 
                 <Center click={click}>
-                    <GreenBird style={{cursor:'pointer'}} onClick={()=> handleClick()} width={click ? 'min(14vw, 15vh)' : 'max(15vw, 20vh)'} height={click ? 'min(14vw, 15vh)' : 'max(15vw, 20vh)'} fill='currentColor' alt='clickable green bird icon'/>
+                    <GreenBird style={{cursor:'pointer'}} onClick={()=> handleClick()} width={click ? 'min(14vw, 15vh)' : 'max(14vw, 20vh)'} height={click ? 'min(14vw, 15vh)' : 'max(14vw, 20vh)'} fill='currentColor' alt='clickable green bird icon'/>
                     <span style={{color:'#fff'}}>click me ↑</span>
                 </Center>
 
