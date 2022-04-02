@@ -102,7 +102,8 @@ const Intro = () => {
                 <Text>
                     <h1>Hey!</h1>
                     <h2>I'm Eugene.</h2>
-                    <h6>I do software engineering @ the University of Auckland.<br/>I <i class="fa-solid fa-heart"></i> plants, books, and tech!</h6>
+                    <h6>I do software engineering @ the University of Auckland.<br/>I <motion.i whileHover={{scale: 1.15}}
+      whileTap={{skewY: 0.7}} class="fa-solid fa-heart"></motion.i> plants, books, and tech!</h6>
                     <h6>I've worked with:</h6>
                     <icons>
                         <i class="fa-brands fa-python"></i>

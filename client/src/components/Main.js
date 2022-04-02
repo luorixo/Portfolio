@@ -10,7 +10,7 @@ import LogoComponent from '../subComponents/LogoComponent'
 import ContactComponent from '../subComponents/Contact';
 import SocialIcons from '../subComponents/SocialIcons'
 import { NavLink } from 'react-router-dom'
-import { GreenBird } from './AllSvgs'
+import { CloudOne, GreenBird } from './AllSvgs'
 import Intro from './Intro'
 
 const Box = styled.div`
@@ -30,14 +30,13 @@ overflow: hidden;
 position: fixed;
 z-index: 10;
 
-
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Karla', sans-serif;
     font-weight: 500;
 }
 
 h2 {
-    font-size: calc(1.1]em + 0.55vw);
+    font-size: calc(1em + 0.55vw);
 }
 `
 
@@ -173,6 +172,7 @@ const Main = () => {
                 {click ? <SocialIcons style={{transition:'ease-out 0.4s'}} theme={'dark'}/> : null }
 
                 <Center click={click}>
+                
                     <GreenBird style={{cursor:'pointer'}} onClick={()=> handleClick()} width={click ? 'min(14vw, 15vh)' : 'max(14vw, 20vh)'} height={click ? 'min(14vw, 15vh)' : 'max(14vw, 20vh)'} fill='currentColor' alt='clickable green bird icon'/>
                     <span style={{color:'#fff'}}>click me ↑</span>
                 </Center>

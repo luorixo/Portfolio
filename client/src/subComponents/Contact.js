@@ -14,7 +14,7 @@ z-index: 1;
 h2 {
     font-family: 'Karla', sans-serif;
     font-weight: 500 !important;
-    font-size: calc(1.1em + 0.55vw);
+    font-size: calc(1em + 0.55vw);
 }
 
 `
