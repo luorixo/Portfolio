@@ -119,80 +119,91 @@ export const Email = (props) => {
 }
 
 export const CloudOne = (props) => (
-  <motion.svg
-    width={501}
-    height={678}
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
-    <g clipPath="url(#a)">
-      <g filter="url(#b)">
-        <path fill="#202020" d="M231.555-86.788h5.263v660.116h-5.263z" />
+    <motion.svg
+      width={524}
+      height={698}
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 550 550"
+      {...props}
+    >
+      <g clipPath="url(#a)">
+        <g
+          style={{
+            mixBlendMode: "hard-light",
+          }}
+          filter="url(#b)"
+        >
+          <path
+            fill="#202020"
+            fillOpacity={0.5}
+            shapeRendering="crispEdges"
+            d="M261.477-75.153h5.23v575.49h-5.23z"
+          />
+        </g>
+        <g filter="url(#c)">
+          <path
+            d="M464.109 534.822a96.672 96.672 0 0 0 1.124-14.703c0-55.077-46.345-99.885-103.31-99.885-8.088 0-16.056.898-23.822 2.678-11.477-21.424-28.182-39.804-48.943-53.709-25.69-17.206-55.843-26.299-87.199-26.299-84.529 0-153.3 66.49-153.3 148.216 0 15.7 2.489 30.995 7.415 45.666C29.684 548.72 12 574.549 12 603.892 12 644.755 46.385 678 88.65 678H436.35C478.615 678 513 644.755 513 603.892c0-31.034-20.069-58.217-48.891-69.07Z"
+            fill="#F4F4F4"
+          />
+        </g>
       </g>
-      <g filter="url(#c)">
-        <path
-          d="M452.109 534.822a96.672 96.672 0 0 0 1.124-14.703c0-55.077-46.345-99.885-103.31-99.885-8.088 0-16.056.898-23.822 2.678-11.477-21.424-28.182-39.804-48.943-53.709-25.69-17.206-55.843-26.299-87.199-26.299-84.529 0-153.3 66.49-153.3 148.216 0 15.7 2.489 30.995 7.415 45.666C17.684 548.72 0 574.549 0 603.892 0 644.755 34.385 678 76.65 678H424.35C466.615 678 501 644.755 501 603.892c0-31.034-20.069-58.217-48.891-69.07Z"
-          fill="#fff"
-        />
-      </g>
-    </g>
-    <defs>
-      <filter
-        id="b"
-        x={231.555}
-        y={-90.788}
-        width={14.263}
-        height={668.116}
-        filterUnits="userSpaceOnUse"
-        colorInterpolationFilters="sRGB"
-      >
-        <feFlood floodOpacity={0} result="BackgroundImageFix" />
-        <feColorMatrix
-          in="SourceAlpha"
-          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-          result="hardAlpha"
-        />
-        <feOffset dx={5} />
-        <feGaussianBlur stdDeviation={2} />
-        <feComposite in2="hardAlpha" operator="out" />
-        <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0" />
-        <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_6_41" />
-        <feBlend
-          in="SourceGraphic"
-          in2="effect1_dropShadow_6_41"
-          result="shape"
-        />
-      </filter>
-      <filter
-        id="c"
-        x={0}
-        y={342.904}
-        width={545}
-        height={399.096}
-        filterUnits="userSpaceOnUse"
-        colorInterpolationFilters="sRGB"
-      >
-        <feFlood floodOpacity={0} result="BackgroundImageFix" />
-        <feColorMatrix
-          in="SourceAlpha"
-          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-          result="hardAlpha"
-        />
-        <feOffset dx={40} dy={60} />
-        <feGaussianBlur stdDeviation={2} />
-        <feComposite in2="hardAlpha" operator="out" />
-        <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0" />
-        <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_6_41" />
-        <feBlend
-          in="SourceGraphic"
-          in2="effect1_dropShadow_6_41"
-          result="shape"
-        />
-      </filter>
-      <clipPath id="a">
-        <path fill="#fff" d="M0 0h501v678H0z" />
-      </clipPath>
-    </defs>
+      <defs>
+        <filter
+          id="b"
+          x={261.477}
+          y={-77.153}
+          width={9.229}
+          height={579.49}
+          filterUnits="userSpaceOnUse"
+          colorInterpolationFilters="sRGB"
+        >
+          <feFlood floodOpacity={0} result="BackgroundImageFix" />
+          <feColorMatrix
+            in="SourceAlpha"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+            result="hardAlpha"
+          />
+          <feOffset dx={2} />
+          <feGaussianBlur stdDeviation={1} />
+          <feComposite in2="hardAlpha" operator="out" />
+          <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.1 0" />
+          <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_6_41" />
+          <feBlend
+            in="SourceGraphic"
+            in2="effect1_dropShadow_6_41"
+            result="shape"
+          />
+        </filter>
+        <filter
+          id="c"
+          x={2}
+          y={339.904}
+          width={521}
+          height={355.096}
+          filterUnits="userSpaceOnUse"
+          colorInterpolationFilters="sRGB"
+        >
+          <feFlood floodOpacity={0} result="BackgroundImageFix" />
+          <feColorMatrix
+            in="SourceAlpha"
+            values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+            result="hardAlpha"
+          />
+          <feOffset dy={7} />
+          <feGaussianBlur stdDeviation={5} />
+          <feComposite in2="hardAlpha" operator="out" />
+          <feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0" />
+          <feBlend in2="BackgroundImageFix" result="effect1_dropShadow_6_41" />
+          <feBlend
+            in="SourceGraphic"
+            in2="effect1_dropShadow_6_41"
+            result="shape"
+          />
+        </filter>
+        <clipPath id="a">
+          <path fill="#fff" d="M0 0h524v698H0z" />
+        </clipPath>
+      </defs>
   </motion.svg>
 )

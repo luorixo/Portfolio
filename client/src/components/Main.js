@@ -138,6 +138,14 @@ transition: height 0.5s ease, width 1s ease 0.5s;
 z-index: 1;
 `
 
+const Clouds = styled.div`
+z-index: 3 !important;
+position: absolute;
+top: 10%;
+left: 85%;
+transform: translate(-50%, -50%);
+`
+
 // framer-motion config
 const container = {
     hidden: {opacity:0},
@@ -167,9 +175,13 @@ const Main = () => {
             <Container>
                 <Box>
                     <Particles style={{position:'absolute',top:0}} params={configFeathers}/>
+                    <Clouds>
+                        <CloudOne width={'25vw'}/>
+                    </Clouds>
                 </Box>
                 
                 {click ? <SocialIcons style={{transition:'ease-out 0.4s'}} theme={'dark'}/> : null }
+                
 
                 <Center click={click}>
                 
