@@ -141,9 +141,10 @@ z-index: 1;
 const Clouds = styled.div`
 z-index: 3 !important;
 position: absolute;
+transform: translate(-50%, -50%);
 top: 10%;
 left: 85%;
-transform: translate(-50%, -50%);
+display: none;
 `
 
 // framer-motion config
