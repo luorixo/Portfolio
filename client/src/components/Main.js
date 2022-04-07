@@ -133,7 +133,7 @@ top: 0;
 bottom: 0;
 right: 0%;
 width: ${props => props.click ? '100%' : '0%'};
-height: ${props => props.click ? '100%' : '1%'};
+height: ${props => props.click ? '100%' : '0.5%'};
 transition: height 0.5s ease, width 1s ease 0.5s;
 z-index: 1;
 `
