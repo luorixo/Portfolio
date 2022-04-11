@@ -31,6 +31,21 @@ background-color: ${darkTheme.text}};
 const SocialIcons = (props) => {
     return (
         <Icons>
+            <Line color={props.theme}
+            initial={
+                {
+                    height:0,
+                    opacity: 0
+                }
+            }
+            animate={{
+                height: '20vh',
+                opacity: 1
+            }}
+            transition={{
+                type:'spring', duration:1, delay:0, mass: 0.01
+            }}
+            /> 
             <motion.div
             initial={{transform:"scale(0)"}}
             animate={{scale:[0,1.5,1]}}
@@ -67,7 +82,7 @@ const SocialIcons = (props) => {
                 }
             }
             animate={{
-                height: '20vh',
+                height: '5vh',
                 opacity: 1
             }}
             transition={{
