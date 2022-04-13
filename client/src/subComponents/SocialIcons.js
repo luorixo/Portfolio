@@ -12,7 +12,7 @@ align-items: center;
 
 position: fixed;
 bottom: 0;
-left: calc(0.8rem + 1.3vw);
+left: calc(0.65rem + 1.3vw);
 
 z-index: 3;
 
@@ -22,30 +22,17 @@ z-index: 3;
 `
 
 const Line = styled(motion.span)`
-width: 2px;
+width: max(2.5vw, 3.2vh);
 transition: ease-out 0.4s;
 height: 8rem;
 background-color: ${darkTheme.text}};
+opacity: 0;
 `
 
 const SocialIcons = (props) => {
     return (
         <Icons>
-            <Line color={props.theme}
-            initial={
-                {
-                    height:0,
-                    opacity: 0
-                }
-            }
-            animate={{
-                height: '20vh',
-                opacity: 1
-            }}
-            transition={{
-                type:'spring', duration:1, delay:0, mass: 0.01
-            }}
-            /> 
+            
             <motion.div
             initial={{transform:"scale(0)"}}
             animate={{scale:[0,1.5,1]}}
@@ -82,7 +69,7 @@ const SocialIcons = (props) => {
                 }
             }
             animate={{
-                height: '5vh',
+                height: '6vh',
                 opacity: 1
             }}
             transition={{
