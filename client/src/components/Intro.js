@@ -26,7 +26,7 @@ ${props => props.theme.text} 00%) top;*/
 
 background-repeat: no-repeat;
 background-size: 100% 2px;
-border-left: 2px solid ${props => props.theme.body};
+border-left: 2px solid rgba(0,0,0,0.9);
 /*border-right: 2px solid ${props => props.theme.text};*/
 z-index:1;
 `

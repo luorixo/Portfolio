@@ -22,7 +22,7 @@ z-index: 3;
 `
 
 const Line = styled(motion.span)`
-width: max(2.5vw, 3.2vh);
+width: max(2.8vw, 3.4vh);
 transition: ease-out 0.4s;
 height: 8rem;
 background-color: ${darkTheme.text}};
@@ -69,8 +69,8 @@ const SocialIcons = (props) => {
                 }
             }
             animate={{
-                height: '6vh',
-                opacity: 1
+                height: '1.7vh',
+                opacity: 0.9
             }}
             transition={{
                 type:'spring', duration:1, delay:0, mass: 0.01
