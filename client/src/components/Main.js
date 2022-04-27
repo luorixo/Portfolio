@@ -129,6 +129,7 @@ const DarkDiv = styled.div`
 position: absolute;
 background-color: #C2DC71;
 background-color: #d4e69b;
+background-color: #DBE0D5;
 top: 0;
 bottom: 0;
 right: 0%;
