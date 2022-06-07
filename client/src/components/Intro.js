@@ -58,42 +58,48 @@ cursor: auto;
 display: flex;
 flex-direction: column;
 justify-content: center;
+line-height: 130%;
 
 small{
-    padding-left: 0vh;
-    font-size: calc(0.4em + 1vw);
+    color: ${props => `rgba(${props.theme.textRgba},0.6)` };
+    margin-bottom: -0.5vh;
+    font-size: calc(0.4em + 1vh);
     font-weight: 400;
 }
 
 h2{
     font-size: calc(1.25em + 1vw) !important;
-    font-weight: 800;
+    font-weight: 400;
 }
 
 red{
     color: #FF0000;
 }
 
+green{
+    color: #4e5c2a;
+}
+
 &>*:nth-last-child(4){
     color: ${props => `rgba(${props.theme.textRgba},0.8)` };
-    font-size: calc(0.6em + 1vw);
+    font-size: calc(0.4em + 1vw);
     font-weight: 400;
-    margin-top: 0.5vh;
+    margin-top: 0vh;
 }
 
 &>*:nth-last-child(3){
     color: ${props => `rgba(${props.theme.textRgba},0.8)` };
-    font-size: calc(0.6em + 1vw);
+    font-size: calc(0.4em + 1vw);
     font-weight: 400;
     margin-top: 2.5vh;
 }
 
 &>*:nth-last-child(2){
     color: ${props => `rgba(${props.theme.textRgba},1)` };
-    font-size: calc(0.6em + 1vw);
+    font-size: calc(0.4em + 1vw);
     font-weight: 800;
-    margin-top: 7vh;
-    margin-bottom: 1.5vh;
+    margin-top: 1vh;
+    margin-bottom: 0vh;
 }
 
 i:not(:last-child){
@@ -111,6 +117,8 @@ i:hover{
     transition: 0.25s;
 }
 
+
+
 ` 
 
 const Intro = () => {
@@ -122,9 +130,10 @@ const Intro = () => {
         >
             <SubBox>
                 <Text>
-                    <h2><small>Hey,</small> I'm Eugene.</h2>
-                    <h6>I study software engineering @ the University of Auckland.</h6>
-                    <h6>I <red><motion.i whileHover={{scale: 1.25}}
+                    <small><green><motion.i whileHover={{scale: 1.35}} transition={{type:'spring', bounce:0.4, duration:0.1, delay:0}}
+      whileTap={{skewY: 0.7}} class="fa-solid fa-seedling"></motion.i></green> Kia Ora,</small>
+                    <h2>I'm Eugene.</h2>
+                    <h6>I do software engineering @ the University of Auckland and also happen to <red><motion.i whileHover={{scale: 1.35}}
       whileTap={{skewY: 0.7}} class="fa-solid fa-heart fa-xs"></motion.i></red>  plants, books, and tech!</h6>
                     <h6><small>In the past,</small> I've worked with:</h6>
                     <icons>

@@ -129,7 +129,7 @@ const DarkDiv = styled.div`
 position: absolute;
 background-color: #C2DC71;
 background-color: #d4e69b;
-background-color: #FFFFFF;
+background-color: #f9fff1;
 top: 0;
 bottom: 0;
 right: 0%;
@@ -177,10 +177,6 @@ const Main = () => {
             <Container>
                 <Box>
                     <Particles style={{position:'absolute',top:0}} params={configFeathers}/>
-                    
-                    {/*<Clouds>
-                    <Branches width={'100vw'}/>
-                    </Clouds>*/}
                 </Box>
                 
                 {click ? <SocialIcons style={{transition:'ease-out 0.4s'}} theme={'dark'}/> : null }
