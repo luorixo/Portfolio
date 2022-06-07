@@ -10,7 +10,7 @@ import LogoComponent from '../subComponents/LogoComponent'
 import ContactComponent from '../subComponents/Contact';
 import SocialIcons from '../subComponents/SocialIcons'
 import { NavLink } from 'react-router-dom'
-import { CloudOne, GreenBird } from './AllSvgs'
+import { Branches, CloudOne, GreenBird } from './AllSvgs'
 import Intro from './Intro'
 
 const Box = styled.div`
@@ -129,7 +129,7 @@ const DarkDiv = styled.div`
 position: absolute;
 background-color: #C2DC71;
 background-color: #d4e69b;
-background-color: #DBE0D5;
+background-color: #FFFFFF;
 top: 0;
 bottom: 0;
 right: 0%;
@@ -143,9 +143,9 @@ const Clouds = styled.div`
 z-index: 3 !important;
 position: absolute;
 transform: translate(-50%, -50%);
-top: 10%;
-left: 85%;
-display: none;
+top: 50%;
+left: 50%;
+
 `
 
 // framer-motion config
@@ -177,9 +177,10 @@ const Main = () => {
             <Container>
                 <Box>
                     <Particles style={{position:'absolute',top:0}} params={configFeathers}/>
-                    <Clouds>
-                        <CloudOne width={'25vw'}/>
-                    </Clouds>
+                    
+                    {/*<Clouds>
+                    <Branches width={'100vw'}/>
+                    </Clouds>*/}
                 </Box>
                 
                 {click ? <SocialIcons style={{transition:'ease-out 0.4s'}} theme={'dark'}/> : null }

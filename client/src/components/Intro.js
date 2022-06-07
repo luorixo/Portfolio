@@ -77,14 +77,14 @@ red{
 &>*:nth-last-child(4){
     color: ${props => `rgba(${props.theme.textRgba},0.8)` };
     font-size: calc(0.35em + 1vw);
-    font-weight: 200;
+    font-weight: 400;
     margin-top: 0.5vh;
 }
 
 &>*:nth-last-child(3){
     color: ${props => `rgba(${props.theme.textRgba},0.8)` };
     font-size: calc(0.35em + 1vw);
-    font-weight: 200;
+    font-weight: 400;
     margin-top: 2.5vh;
 }
 
