@@ -9,8 +9,8 @@ left: 50%;
 top: 50%;
 transform: translate(-50%, -50%);
 
-/*width: max(52vw, 55vh);*/
-width: max(100vmin, 55vw);
+/*width: max(70vw, 70vh);*/
+width: max(100vmin, 65vw);
 display: flex;
 z-index: 2;
 
@@ -61,8 +61,8 @@ justify-content: center;
 
 small{
     padding-left: 0vh;
-    font-size: calc(0.15em + 1vw);
-    font-weight: 200;
+    font-size: calc(0.4em + 1vw);
+    font-weight: 400;
 }
 
 h2{
@@ -76,21 +76,21 @@ red{
 
 &>*:nth-last-child(4){
     color: ${props => `rgba(${props.theme.textRgba},0.8)` };
-    font-size: calc(0.35em + 1vw);
+    font-size: calc(0.6em + 1vw);
     font-weight: 400;
     margin-top: 0.5vh;
 }
 
 &>*:nth-last-child(3){
     color: ${props => `rgba(${props.theme.textRgba},0.8)` };
-    font-size: calc(0.35em + 1vw);
+    font-size: calc(0.6em + 1vw);
     font-weight: 400;
     margin-top: 2.5vh;
 }
 
 &>*:nth-last-child(2){
     color: ${props => `rgba(${props.theme.textRgba},1)` };
-    font-size: calc(0.35em + 1vw);
+    font-size: calc(0.6em + 1vw);
     font-weight: 800;
     margin-top: 7vh;
     margin-bottom: 1.5vh;
@@ -110,6 +110,7 @@ i:hover{
     color: #8AA92C;
     transition: 0.25s;
 }
+
 ` 
 
 const Intro = () => {
