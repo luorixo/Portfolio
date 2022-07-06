@@ -62,14 +62,15 @@ line-height: 130%;
 
 small{
     color: ${props => `rgba(${props.theme.textRgba},0.6)` };
-    margin-bottom: -0.5vh;
     font-size: calc(0.4em + 1vh);
     font-weight: 400;
+    letter-spacing: 0.5vw;
 }
 
 h2{
-    font-size: calc(1.25em + 1vw) !important;
-    font-weight: 400;
+    font-size: calc(1em + 1vw) !important;
+    font-weight: 100;
+    line-height: calc(0.8em + 2.5vh);
 }
 
 red{
@@ -77,7 +78,7 @@ red{
 }
 
 green{
-    color: #4e5c2a;
+    color: #647637;
 }
 
 &>*:nth-last-child(4){
@@ -131,11 +132,11 @@ const Intro = () => {
             <SubBox>
                 <Text>
                     <small><green><motion.i whileHover={{scale: 1.35}} transition={{type:'spring', bounce:0.4, duration:0.1, delay:0}}
-      whileTap={{skewY: 0.7}} class="fa-solid fa-seedling"></motion.i></green> Kia Ora,</small>
+      whileTap={{skewY: 0.7}} class="fa-solid fa-seedling fa-sm"></motion.i></green> Hello there!</small>
                     <h2>I'm Eugene.</h2>
-                    <h6>I do software engineering @ the University of Auckland and also happen to <red><motion.i whileHover={{scale: 1.35}}
-      whileTap={{skewY: 0.7}} class="fa-solid fa-heart fa-xs"></motion.i></red>  plants, books, and tech!</h6>
-                    <h6><small>In the past,</small> I've worked with:</h6>
+                    <h2>I study software engineering and <red><motion.i whileHover={{scale: 1.35}}
+      whileTap={{skewY: 0.7}} class="fa-solid fa-heart fa-xs"></motion.i></red> plants, books, and tech!</h2>
+                    <h6>I've worked with:</h6>
                     <icons>
                         <i class="fa-brands fa-python fa-sm"></i>
                         <i class="fa-brands fa-js fa-sm" title="JavaScript"></i>
