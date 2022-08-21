@@ -1,4 +1,4 @@
-# My Portfolio Website! <img src="https://raw.githubusercontent.com/luorixo/portfolio/85f264e15c09b023dc2d100d5c6f1a6471e9575a/client/src/assets/svg/bird-svgrepo-com.svg" alt="Green Bird Icon" width="40"/>
+# My Portfolio Website (outdated)! <img src="https://raw.githubusercontent.com/luorixo/portfolio/85f264e15c09b023dc2d100d5c6f1a6471e9575a/client/src/assets/svg/bird-svgrepo-com.svg" alt="Green Bird Icon" width="40"/>
 My personal portfolio website made using ReactJS, Framer motion, and styled components.<br/>
 Check it out here: https://echua.top
 
